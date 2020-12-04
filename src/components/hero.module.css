@@ -1,0 +1,9 @@
+.hero {
+    width: 100vw;
+    display: flex;
+}
+
+.spread{
+    max-width: 70vw;
+    margin:auto;
+}

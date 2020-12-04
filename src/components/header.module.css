@@ -1,0 +1,58 @@
+.header {
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    height:10vh;
+}
+
+h1{
+    font-weight: 200;
+    text-align: center;
+    margin-top:auto;
+    margin-bottom:auto;
+    font-style: 72px;
+    letter-spacing: -1px;
+}
+
+span{
+    font-style: italic;
+}
+
+/* nav{
+    font-family: helvetica neue;
+    font-weight: 100;
+    display: inline-block;
+    margin-top:auto;
+    margin-bottom:auto;
+    
+}
+
+    .nav-list{
+        display:flex;
+        list-style-type: none;
+        margin:0;
+    }
+
+    .nav-item {
+        display: flex;
+        font-size: 0.9rem;
+        margin-right: 1.3rem;
+    }
+
+
+    .nav-item:hover{
+        color: hsla(315, 86%, 66%, 0.8);
+    }
+    .active-nav-item{
+        color:hsl(244, 100%, 69%)
+    }
+
+.socialList {
+    display: inline-block;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+    .social{
+        margin-right:1rem;
+    } */
