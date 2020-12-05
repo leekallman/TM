@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link, graphql, useStaticQuery} from "gatsby"
 import footerStyles from './footer.module.css';
-import headerStyles from './header.module.css';
 
 const Footer = () => {
     return(
@@ -23,29 +22,34 @@ const Footer = () => {
          </div>
 
         <div className={footerStyles.team}>
+            <div className={footerStyles.column1}>
             <h2>Editorial + Design Team</h2>
-            <ul>
-                <li>Lizette Olofsson</li>
-                <li>Ashik Zaman</li>
-                <li>Lisa Lee Källman</li>
-                <li>Tor Westerlund</li>
-               <li>Marta Casagrande</li>
-            </ul>
-
+                <ul>
+                    <li>Lizette Olofsson</li>
+                    <li>Ashik Zaman</li>
+                    <li>Lisa Lee Källman</li>
+                    <li>Tor Westerlund</li>
+                <li>Marta Casagrande</li>
+                </ul>
+            </div>  
+            <div className={footerStyles.column2}>
             <h2>Contributors</h2>
-            <ul>
-                <li>Riin Raanu</li>
-                <li>Maja Westerberg</li>
-                <li>Thulani Gushman</li>
-                <li>Clarice Gourant</li>
-            </ul>
+                <ul>
+                    <li>Riin Raanu</li>
+                    <li>Maja Westerberg</li>
+                    <li>Thulani Gushman</li>
+                    <li>Clarice Gourant</li>
+                </ul>
+            </div>  
 
+            <div className={footerStyles.column3}>
             <h2>Contact</h2>
             <ul>
                 <li><a href="mailto:contact@tortmagazine.com">contact@tortmagazine.com</a></li>
                 <li><a href="instagram.com/tort_magazine">instagram</a></li>
                 <li><a href="facebook.com/tortmagazine">facebook</a></li>
             </ul>
+            </div>
         </div>
         </footer>
         )

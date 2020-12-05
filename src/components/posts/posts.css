@@ -2,9 +2,6 @@
     display:grid;
     grid-template-columns: repeat(2, 1fr);
 }
-/* section{
-    scroll-snap-align: start;
-} */
 
 .post{
     display:flex;
@@ -39,7 +36,7 @@
 }
 .postCopy h3{
     font-weight: 400;
-    max-width: 30vw;
+    max-width: 25vw;
     margin: 0 auto 1.5rem auto;
 }
 
