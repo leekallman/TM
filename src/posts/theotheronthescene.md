@@ -1,11 +1,9 @@
 ---
 title: "The Other on the Scene"
 name: "Ninos Josef"
-details: "THOUGHTS by Ninos Josef INTERVIEW by Lizette Olofsson PHOTOGRAPHY by William Harvey Howe"
-
+details: "INTERVIEW by Lizette Olofsson PHOTOGRAPHY by William Harvey Howe"
+featuredImage: "../images/ninos.jpeg"
 ---
-
-![Ninos Josef](../images/ninos.jpeg)
 
 My interview with the dancer and choreographer Ninos Josef was not until a good while, yet I was already outside of his apartment in trendy Södermalm, Stockholm. This was deliberate; when mentioning to acquaintances that I was going to interview Ninos, they all had made this face and cautioned me to be prepared for a challenging and intellectually difficult conversation. When, during the interview, I felt comfortable bringing this up with Ninos, his comment was: “You have heard that I am an angry foreigner”.
 

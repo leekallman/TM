@@ -1,3 +1,31 @@
 .footer{
-    
+    color:white;
+    background-image: url(../images/Background_the\ hug.jpg);
+    height:100vh; 
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.footer h1{
+    color:white;
+}
+.logo{
+    grid-column: 4 / 9;
+}
+
+
+.team{
+    grid-column: 2 / 12;
+    display: flex;
+}
+
+.team h2{
+    font-size: 22px;
+    letter-spacing: 0px;
+}
+.team ul{
+    list-style: none;
+}
+
+.about{
+    grid-column: 2 / 6;
 }
