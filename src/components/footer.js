@@ -1,11 +1,13 @@
 import React from 'react';
-import {Link, graphql, useStaticQuery} from "gatsby"
+// import {Link, graphql, useStaticQuery} from "gatsby"
 import footerStyles from './footer.module.css';
+import tort from "./../images/tort.jpg" 
+import { Link } from 'react-scroll'
 
 const Footer = () => {
     return(
         <footer className={footerStyles.footer}>
-            <Link to ="/" className={footerStyles.logo}><h1><span>Tort</span> Magazine
+            <Link to='top' smooth={true} className={footerStyles.logo}><h1><span>Tort</span> Magazine
             </h1></Link>
 
         <div className={footerStyles.about}>
@@ -21,12 +23,13 @@ const Footer = () => {
                 </p>
          </div>
 
-        <div className={footerStyles.team}>
+         <img src={tort} className={footerStyles.tort} alt="illustration" width="300px"/>
+
+        {/* <div className={footerStyles.team}> */}
             <div className={footerStyles.column1}>
             <h2>Editorial + Design Team</h2>
                 <ul>
                     <li>Lizette Olofsson</li>
-                    <li>Ashik Zaman</li>
                     <li>Lisa Lee Källman</li>
                     <li>Tor Westerlund</li>
                 <li>Marta Casagrande</li>
@@ -35,6 +38,7 @@ const Footer = () => {
             <div className={footerStyles.column2}>
             <h2>Contributors</h2>
                 <ul>
+                    <li>Ashik Zaman</li>
                     <li>Riin Raanu</li>
                     <li>Maja Westerberg</li>
                     <li>Thulani Gushman</li>
@@ -50,7 +54,7 @@ const Footer = () => {
                 <li><a href="facebook.com/tortmagazine">facebook</a></li>
             </ul>
             </div>
-        </div>
+        {/* </div> */}
         </footer>
         )
     }

@@ -1,9 +1,23 @@
 .hero {
     width: 100vw;
+    height:100vh;
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    scroll-snap-align: start;
 }
 
 .spread{
     max-width: 70vw;
-    margin:auto;
+    margin:1rem auto;
+}
+
+.purchase{
+    margin:0 auto;
+    border: solid 1px black;
+    /* width: 30vw; */
+    padding:10px 50px;
+}
+.purchase:hover {
+    background-color: #F9F9F9;
 }

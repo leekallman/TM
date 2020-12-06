@@ -1,8 +1,7 @@
 import React from "react"
 import './main.css';
-import Header from '../components/header.js';
 import Hero from '../components/hero.js';
-import Posts from '../components/posts/posts.js';
+import Posts from '../components/posts.js';
 import Footer from '../components/footer'
 // export const query = graphql`
 // query (
@@ -30,7 +29,6 @@ import Footer from '../components/footer'
       return (
         <div className="root">
           <section>
-            <Header />
             <Hero />
           </section>
             <Posts />
