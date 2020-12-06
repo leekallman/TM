@@ -1,8 +1,9 @@
 import React from "react"
-import './main.css';
-import Hero from '../components/hero.js';
-import Posts from '../components/posts.js';
+import './main.css'
+import Hero from '../components/hero.js'
+import Posts from '../components/posts.js'
 import Footer from '../components/footer'
+import About from '../components/about'
 // export const query = graphql`
 // query (
 //   $slug: String! ) {
@@ -32,6 +33,7 @@ import Footer from '../components/footer'
             <Hero />
           </section>
             <Posts />
+            <About />
           <section>
           <Footer />
           </section>

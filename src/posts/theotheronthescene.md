@@ -1,6 +1,7 @@
 ---
 title: "The Other on the Scene"
 name: "Ninos Josef"
+date: "2020-01-05"
 details: "INTERVIEW by Lizette Olofsson PHOTOGRAPHY by William Harvey Howe"
 featuredImage: "../images/ninos.jpeg"
 ---

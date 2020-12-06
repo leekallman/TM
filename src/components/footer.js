@@ -1,7 +1,7 @@
 import React from 'react';
 // import {Link, graphql, useStaticQuery} from "gatsby"
 import footerStyles from './footer.module.css';
-import tort from "./../images/tort.jpg" 
+import spread from "./../images/spread.jpg" 
 import { Link } from 'react-scroll'
 
 const Footer = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
                 </p>
          </div>
 
-         <img src={tort} className={footerStyles.tort} alt="illustration" width="300px"/>
+         <img src={spread} className={footerStyles.tort} alt="spread" width="300px"/>
 
         {/* <div className={footerStyles.team}> */}
             <div className={footerStyles.column1}>
@@ -32,7 +32,7 @@ const Footer = () => {
                     <li>Lizette Olofsson</li>
                     <li>Lisa Lee Källman</li>
                     <li>Tor Westerlund</li>
-                <li>Marta Casagrande</li>
+                    <li>Marta Casagrande</li>
                 </ul>
             </div>  
             <div className={footerStyles.column2}>

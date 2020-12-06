@@ -13,7 +13,9 @@ const Posts = () => {
     
     const data = useStaticQuery(graphql`
         query {
-            allMarkdownRemark {
+            allMarkdownRemark (
+                sort: { order: DESC, fields: [frontmatter___date] }
+                ){
                 edges {
                     node {
                         frontmatter {
@@ -55,6 +57,7 @@ const Posts = () => {
                     <div className={toggle ? 'hide' : 'postCopy'} >
                         <h3>{edge.node.frontmatter.details}</h3>
                         <div className="copy" dangerouslySetInnerHTML= {{__html: edge.node.html}}></div>
+                        <h4>Read the full article in Issue One</h4>
                     </div>
                 
                 </div>

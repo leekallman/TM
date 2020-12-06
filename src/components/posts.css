@@ -19,6 +19,7 @@
     justify-content: space-around;
     display:flex;
     flex-direction: column;
+    background-color: #F9F9F9;
 }
 .postDescrip h2{
     margin: auto;
@@ -34,7 +35,8 @@
     z-index: 9999;
     padding:3rem 5rem;
     /* transition: transform 2s ease;  */
-    animation: fadeIn ease 0.5s;
+    /* animation: fadeIn ease-in-out 0.5s; */
+    transition: all 0.5s ease-in-out;
 }
 .postCopy h3{
     font-weight: 400;
@@ -45,7 +47,7 @@
 .copy{
     text-align: left;
 }
-  .hide {
+.hide {
     background-color:#506944;
     position: absolute;
     top: 0;
@@ -53,33 +55,36 @@
     height:100vh;
     width: 50vw;
     z-index: 9999;
-    padding:4rem;
+    padding:3rem 5rem;
     opacity:0;
  }
 
 
- @keyframes fadeIn {
+@keyframes fadeIn {
     0% {
       opacity:0;
     }
     100% {
       opacity:1;
     }
-  }
-  
+}
+
+h4{
+    margin:1rem;
+}
 
 button{
     margin:auto;
-    border: solid 1px black;
     /* width: 30vw; */
     padding:10px 50px;
     display:inline-block;
     font-family: Spectral;
     background: none;
     outline: none;
+    border: solid 1px #F9F9F9;
 }
 
 button:hover {
-    background-color: #F9F9F9;
+    border: solid 1px black;
 }
 
