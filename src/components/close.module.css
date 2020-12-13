@@ -1,0 +1,11 @@
+.closeBtn{
+    margin:auto;
+    background: none;
+    padding:0;
+    float: right;
+    border:none;
+}
+
+button img{
+    max-width: 20px;
+}

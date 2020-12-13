@@ -29,7 +29,9 @@
     "gatsby-transformer-sharp": "^2.8.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scroll": "^1.8.1"
+    "react-scroll": "^1.8.1",
+    "react-three-fiber": "^5.3.7",
+    "three": "^0.123.0"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",

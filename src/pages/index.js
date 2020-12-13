@@ -4,6 +4,7 @@ import Hero from '../components/hero.js'
 import Posts from '../components/posts.js'
 import Footer from '../components/footer'
 import About from '../components/about'
+// import IssueOne from '../components/issueOne'
 // export const query = graphql`
 // query (
 //   $slug: String! ) {

@@ -5,19 +5,20 @@
     flex-direction: column;
     text-align: center;
     scroll-snap-align: start;
+    background-color:var(--hero)
 }
 
-.spread{
+.spread, video{
     max-width: 70vw;
-    margin:1rem auto;
+    margin: 0 auto;
 }
 
 .purchase{
-    margin:0 auto;
-    border: solid 1px black;
+    margin:1rem auto;
+    border: solid 1px var(--hero);
     /* width: 30vw; */
     padding:10px 50px;
 }
 .purchase:hover {
-    background-color: #F9F9F9;
+    border: solid 1px var(--black)
 }

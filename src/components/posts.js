@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
-// import Button from './button.js';
 import './posts.css';
+import Close from '../components/Close'
 
 const Posts = () => {
     const [toggle, setToggle] = useState (true);
@@ -49,17 +49,17 @@ const Posts = () => {
                         <h2 className="postTitle">{edge.node.frontmatter.title}</h2>
                         <h2 className="name">{edge.node.frontmatter.name}</h2>
 
-                        <button onClick={toggler}><h2 className="readMore">Read more</h2></button>
+                        <button className="readMoreBtn" onClick={toggler}><h2 className="readMore">Read more</h2></button>
                     </div>
                 
-                    {/* <Img className="postImg" fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} />  */}
+                    <Img className="postImg" fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} /> 
 
                     <div className={toggle ? 'hide' : 'postCopy'} >
+                        <Close close={toggler} />
                         <h3>{edge.node.frontmatter.details}</h3>
                         <div className="copy" dangerouslySetInnerHTML= {{__html: edge.node.html}}></div>
                         <h4>Read the full article in Issue One</h4>
                     </div>
-                
                 </div>
             )}
         )}

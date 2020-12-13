@@ -2,8 +2,8 @@
 title: "Watching Humans watching Non-humans"
 name: "EvaMarie Lindahl"
 date: "2020-01-04"
-details: "INTERVIEW by Lizette Olofsson PHOTOGRAPHY by Emilia XXX"
-featuredImage: "../images/evamarie.jpg"
+details: "INTERVIEW by Lizette Olofsson PHOTOGRAPHY by Emilia Stålhammar"
+featuredImage: "../images/evamarie.jpeg"
 ---
 
 <!-- ![EvaMarie](../images/evamarie.jpg) -->

@@ -1,3 +1,4 @@
+
 .posts {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
@@ -10,6 +11,7 @@
     position: relative;
     text-align: center;
     scroll-snap-align: start;
+    /* color: #FEEF22; */
 }
 .postDescrip, .postImg{
     width:50vw;
@@ -19,14 +21,64 @@
     justify-content: space-around;
     display:flex;
     flex-direction: column;
-    background-color: #F9F9F9;
+    /* background-color: #cfb493; */
 }
+/* article intro */
+.post:nth-child(1) .postCopy, .post:nth-child(3) .postCopy, .post:nth-child(5) .postCopy{
+    background-color: var(--article1);
+}
+.post:nth-child(2) .postCopy, .post:nth-child(4) .postCopy{
+    background-color: var(--article2);
+}
+
+/* article copy close buttons */
+.post:nth-child(1) .postCopy button, .post:nth-child(3) .postCopy button, .pos:nth-child(5) .postCopy button{
+    border: solid 1px var(--article1);
+}
+.post:nth-child(2) .postCopy button, .post:nth-child(4) .postCopy  button{
+    border: solid 1px var(--article2);
+}
+.post:nth-child(1) .postCopy button:hover, .post:nth-child(3) .postCopy button:hover, .post:nth-child(5) .postCopy button:hover{
+    cursor: pointer;
+}
+.post:nth-child(2) .postCopy button:hover, .post:nth-child(4) .postCopy button:hover{
+    cursor: pointer;
+}
+
+.post:nth-child(1) .hide button, .post:nth-child(3) .hide button, .pos:nth-child(5) .hide button{
+    border: none;
+}
+.post:nth-child(2) .hide button, .post:nth-child(4) .hide button{
+    border: none;
+}
+
+
+/* .postCopy{
+    background-color:#cfb493;
+} */
+
+/* article cover */
+.post:nth-child(1), .post:nth-child(3), .post:nth-child(5) {
+    background-color: var(--article1);
+}
+.post:nth-child(2), .post:nth-child(4){
+    background-color: var(--article2);
+}
+
+/* article cover buttons */
+.post:nth-child(1) button, .post:nth-child(3) button, .post:nth-child(5) button{
+    border: solid 1px var(--article1);
+}
+
+.post:nth-child(2) button, .post:nth-child(4) button{
+    border: solid 1px var(--article2);
+}
+
 .postDescrip h2{
     margin: auto;
 }
 
 .postCopy{
-    background-color:#506944;
     position: absolute;
     top: 0;
     right: 0;
@@ -34,21 +86,14 @@
     width: 50vw;
     z-index: 9999;
     padding:3rem 5rem;
-    /* transition: transform 2s ease;  */
-    /* animation: fadeIn ease-in-out 0.5s; */
-    transition: all 0.5s ease-in-out;
-}
-.postCopy h3{
-    font-weight: 400;
-    max-width: 25vw;
-    margin: 0 auto 1.5rem auto;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .copy{
     text-align: left;
 }
 .hide {
-    background-color:#506944;
+    background-color: transparent;
     position: absolute;
     top: 0;
     right: 0;
@@ -57,17 +102,18 @@
     z-index: 9999;
     padding:3rem 5rem;
     opacity:0;
+    transition: opacity 0.3s ease-in-out;
  }
 
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
     0% {
       opacity:0;
     }
     100% {
       opacity:1;
     }
-}
+} */
 
 h4{
     margin:1rem;
@@ -75,16 +121,91 @@ h4{
 
 button{
     margin:auto;
-    /* width: 30vw; */
     padding:10px 50px;
     display:inline-block;
     font-family: Spectral;
     background: none;
     outline: none;
-    border: solid 1px #F9F9F9;
+    /* border: solid 1px #cfb493; */
 }
 
-button:hover {
-    border: solid 1px black;
+.post button:hover{
+    border: solid 1px var(--black);
+    cursor: pointer;
 }
 
+
+@media only screen and (max-width: 1200px) {
+    .postCopy{
+        font-size: 16px;
+        padding:2rem 3rem;
+    }
+    
+}
+
+@media only screen and (max-width: 1000px) {
+    .postCopy{
+        padding:1rem 2rem;
+    }    
+    .postCopy h3{
+        margin: 1rem auto 2rem auto;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .post{
+        display:flex;
+        flex-direction: column;
+        width:100vw;
+    }
+    .postDescrip{
+        width:100vw;
+        /* background-image: url(../images/ninos.jpeg); */
+    }
+    .postImg{ 
+        display: absolute;
+        top: 0;
+        height:100vh;
+        width: 100vw;
+        z-index: 0;
+        opacity:0.5;
+    }
+
+    .postCopy{
+        top: 0;
+        left: 0;
+        width: 100vw;
+        font-size: 18px;
+        padding:3rem 5rem;
+    }
+    .postCopy h3{
+        max-width: 40vw;
+    }
+
+    h4{
+        margin:2rem;
+    }
+    .hide {
+        top: 0;
+        left: 0;
+        width: 100vw;
+     }
+
+   
+    .postDescrip h2, button{
+        z-index: 2;
+    }
+
+    /* article cover buttons */
+    .post:nth-child(1) button, .post:nth-child(3) button, .post:nth-child(5) button{
+        border: none;
+    }
+
+    .post:nth-child(2) button, .post:nth-child(4) button{
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
