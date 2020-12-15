@@ -14,7 +14,10 @@ const Hero = () => {
         <video controls width="600px">
             <source src={video} type="video/mp4" />
         </video>
-        <a className={heroStyles.purchase} href="/"><h2>Purchase</h2></a>
+
+        {/* <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/650338109326125.5fd251c89a449.gif" width="800px"/> */}
+
+        <a className={heroStyles.purchase} href="/#footer"><h2>Purchase</h2></a>
         </div>
         );
     }

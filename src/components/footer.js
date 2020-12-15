@@ -8,7 +8,7 @@ import IssueOne from '../components/IssueOne';
 
 const Footer = () => {
     return(
-        <footer className={footerStyles.footer}>
+        <footer className={footerStyles.footer} id="footer">
             <div className={footerStyles.spinner}> 
                 <IssueOne className={footerStyles.issue}/>
             </div>
@@ -28,7 +28,7 @@ const Footer = () => {
 
             <div className={footerStyles.column1}>
                 <p>
-                    Contributors: Ashik Zaman, Riin Raanu, Maja Winberg, Thulani Gushman, Clarice Gourant.<br/>
+                    Contributors: Ashik Zaman, Riin Raanu, Maja Winberg, Thulani Gushman, Clarice Goulart.<br/>
                     <br/>
                     Photographers: William Harvey Howe, Emilia Stålhammar
                     <br/><br/>
@@ -39,11 +39,9 @@ const Footer = () => {
                 </p>
             </div>
 
-            
-
             <div className={footerStyles.column2}>
                 <div className={footerStyles.buy}>
-                        <a href="/">
+                        <a href="https://www.shop.tortmagazine.com">
                             <h2>Buy now</h2>
                         </a>
                 </div>

@@ -19,7 +19,7 @@
     justify-content: space-around;
     display:flex;
     flex-direction: column;
-    background-color:var(--article2)
+    background-color:#FBFBFC;
 }
 .title{
     margin: 4rem auto;

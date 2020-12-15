@@ -24,12 +24,27 @@ html {
 body{
     font-family: 'Spectral', serif;
     font-weight: 200;
-    /* font-size: 18px; */
     cursor: url('../images/cursor.png'),auto;
+}
+
+.scroll-block{
+    overflow: hidden;
 }
 
 section{
     scroll-snap-align: start;
+}
+
+.welcome {
+    /* scroll-snap-align: none;
+    position: absolute; */
+    z-index: 200;
+    background-color:rgba(255, 255, 255);
+    transition: all .5s ease;
+}
+
+.home{
+    position: relative;
 }
 
 

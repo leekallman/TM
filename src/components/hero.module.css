@@ -5,7 +5,8 @@
     flex-direction: column;
     text-align: center;
     scroll-snap-align: start;
-    background-color:var(--hero)
+    background-color:var(--hero);
+    justify-content: space-between;
 }
 
 .spread, video{
@@ -14,11 +15,17 @@
 }
 
 .purchase{
-    margin:1rem auto;
+    margin:0 auto;
     border: solid 1px var(--hero);
     /* width: 30vw; */
-    padding:10px 50px;
+    padding:20px 50px;
 }
 .purchase:hover {
     border: solid 1px var(--black)
+}
+
+@media only screen and (max-width: 900px) {
+    .purchase{
+        
+    }
 }

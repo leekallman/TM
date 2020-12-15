@@ -1,9 +1,11 @@
 import React from "react"
 import './main.css'
+import Welcome from '../components/welcome.js'
 import Hero from '../components/hero.js'
 import Posts from '../components/posts.js'
 import Footer from '../components/footer'
-import About from '../components/about'
+// import About from '../components/about'
+
 // import IssueOne from '../components/issueOne'
 // export const query = graphql`
 // query (
@@ -30,11 +32,14 @@ import About from '../components/about'
       
       return (
         <div className="root">
-          <section>
+            <section className="welcome">
+            <Welcome />
+            </section>
+            <section className="home">      
             <Hero />
           </section>
             <Posts />
-            <About />
+            {/* <About /> */}
           <section>
           <Footer />
           </section>

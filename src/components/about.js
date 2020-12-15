@@ -40,7 +40,7 @@ const About = () => {
                 <div className="editorial">
                     <h4>Editorial + Design Team</h4>
                     <ul>
-                        <li>Lizette Olofsson</li>
+                        <li>Liz Olofsson</li>
                         <li>Lisa Lee Källman</li>
                         <li>Tor Westerlund</li>
                         <li>Marta Casagrande</li>
@@ -52,7 +52,7 @@ const About = () => {
                     <h4>Contributors</h4>
                     <ul>
                         <li>Ashik Zaman</li>
-                        <li>Clarice Gourant</li>
+                        <li>Clarice Goulart</li>
                         <li>Maja Winberg</li>
                         <li>Riin Raanu</li>
                         <li>Thulani Gushman</li>

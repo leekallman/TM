@@ -8,20 +8,22 @@ import bottom from '../images/bottom.svg'
 
 class IssueOne extends Component {
     componentDidMount() {
+      const canvas = document.getElementById("canvas")
         //Create the scene
         var scene = new THREE.Scene();
 
+
         //Create the camera
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.5, 1000);
+        var camera = new THREE.PerspectiveCamera(65, window.innerWidth/window.innerHeight, 0.5, 1000);
         camera.position.z = 4;
 
         // Create the renderer and add it to the page's body element
-        var renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize(window.innerWidth*0.2, window.innerHeight*0.25, 0.5, 1000);
+        var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth*0.2, window.innerHeight*0.25);
         renderer.setPixelRatio( window.devicePixelRatio );
         renderer.setClearColor( 0xffffff, 0);
-        // scene.background = new THREE.Color( 0xff0000 );
-        document.getElementById("canvas").appendChild(renderer.domElement);
+
+        canvas.appendChild(renderer.domElement);
         // document.body.appendChild(renderer.domElement);
 
         // Load the textures (book images)
@@ -71,22 +73,6 @@ class IssueOne extends Component {
         directionalLight.position.set(1, 1, 1).normalize();
         scene.add(directionalLight);
 
-
-        // function resizeCanvasToDisplaySize() {
-        //   const canvas = renderer.domElement;
-        //   const width = canvas.clientWidth;
-        //   const height = canvas.clientHeight;
-        //   if (canvas.width !== width ||canvas.height !== height) {
-        //     // you must pass false here or three.js sadly fights the browser
-        //     renderer.setSize(width, height, false);
-        //     camera.aspect = width / height;
-        //     camera.updateProjectionMatrix();
-        
-        //     // set render target sizes here
-        //   }
-        // }
-
-
         function animate(){
             requestAnimationFrame(animate);
             // cube.rotation.x +=0.01;
@@ -95,6 +81,13 @@ class IssueOne extends Component {
             renderer.render(scene, camera)
         };
         animate();
+
+        window.addEventListener("resize", function() {
+          camera.aspect = canvas.clientWidth/canvas.clientHeight
+          camera.updateProjectionMatrix()
+          renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+        })
+
     }
 
     render(){

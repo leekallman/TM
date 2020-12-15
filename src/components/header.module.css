@@ -5,32 +5,26 @@
 }
 
 h1{
-    font-weight: 200;
     text-align: center;
-    margin-bottom:auto;
-    font-size: 4rem;
-    letter-spacing: -1px;
+    margin:1rem auto;
 }
 
-.tort{
+/* .tort{
     font-style: italic;
     animation: rotation 5s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
-  /* -webkit-animation: infiniteRotate 2s linear infinite; /* Safari */
-  /* animation: infiniteRotate 2s linear infinite; */
     display: inline-block;
-  
-}
+} */
 
-@keyframes rotation {
+/* @keyframes rotation {
     from {
       transform: rotateY(0deg);
     }
     to {
       transform: rotateY(359deg);
     }
-  }
+  } */
 
 
 /* safari */
