@@ -9,3 +9,14 @@
 button img{
     max-width: 20px;
 }
+
+@media only screen and (min-width: 900px) {
+    .closeBtn{
+        display:none;
+    }
+}
+@media only screen and (max-width: 450px) {
+    button img{
+        max-width: 15px;
+    }
+}

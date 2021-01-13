@@ -49,7 +49,8 @@ const Posts = () => {
                         <h2 className="postTitle">{edge.node.frontmatter.title}</h2>
                         <h2 className="name">{edge.node.frontmatter.name}</h2>
 
-                        <button className="readMoreBtn" onClick={toggler}><h2 className="readMore">Read more</h2></button>
+                        <button className="readMoreBtn" onClick={toggler}>{toggle ? <h2 className="readMore">Read more</h2> : <h2 className="readMore">Read less</h2>} 
+                        </button>
                     </div>
                 
                     <Img className="postImg" fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} /> 

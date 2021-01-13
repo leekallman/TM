@@ -1,7 +1,5 @@
 import React from 'react';
-// import {Link, graphql, useStaticQuery} from "gatsby"
 import footerStyles from './footer.module.css';
-import gif from "./../images/test.gif" 
 import { Link } from 'react-scroll'
 import IssueOne from '../components/IssueOne';
 
@@ -9,25 +7,22 @@ import IssueOne from '../components/IssueOne';
 const Footer = () => {
     return(
         <footer className={footerStyles.footer} id="footer">
-            <div className={footerStyles.spinner}> 
-                <IssueOne className={footerStyles.issue}/>
-            </div>
             <Link to='top' smooth={true} className={footerStyles.logo}><h1><span>Tort</span> Magazine
             </h1></Link>
 
+            <div className={footerStyles.spinner}> 
+                <IssueOne className={footerStyles.issue}/>
+            </div>
             <div className={footerStyles.about}>
                 <p>ISSUE ONE<br/>
-                Tort Magazine Issue One was conceived with a single idea: to create a 
-                dialogue between the conceptual artist Vadim Zakharov and the fashion world. 
-                There are no off-bounds topics. Vadim Zakharov is an artist who expands 
-                his media across all fields from painting, drawing and photography to video, 
-                performance and installation, making a printed issue was both a challenge and a game.        
+                Unwritten rules exist everywhere, in every culture and religion. In the world of art and on the dance scene, in sexual relations as well as in marriages. Even among species, we have notions of the correct behavior. Rarely we do remember the creator of these norms – more often we know who broke them. Tort explores present societal conceptions through honest conversations with individuals committed to change.      
                 </p>
                 <br/>
             </div>
 
             <div className={footerStyles.column1}>
                 <p>
+                    Editorial: Liz Olofsson, Lisa Lee, Marta Casagrande, Tor Westerlund<br/><br/>
                     Contributors: Ashik Zaman, Riin Raanu, Maja Winberg, Thulani Gushman, Clarice Goulart.<br/>
                     <br/>
                     Photographers: William Harvey Howe, Emilia Stålhammar
@@ -50,12 +45,7 @@ const Footer = () => {
                 <li><a href="https://instagram.com/tort_magazine" target="_blank" >instagram</a></li>
                 <li><a href="https://facebook.com/tortmagazine" target="_blank" >facebook</a></li>
                 </ul>
-            </div>  
-
-            <div className={footerStyles.column3}>
-                
-            </div>
-        
+            </div> 
         </footer>
         )
     }

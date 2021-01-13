@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link, graphql, useStaticQuery} from "gatsby"
 import headerStyles from './header.module.css';
-import tort from "../images/tort.svg" 
 // import { library } from '@fortawesome/fontawesome-svg-core'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { fab } from '@fortawesome/free-brands-svg-icons'

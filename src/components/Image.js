@@ -1,20 +1,22 @@
 import React, { Component } from "react"
 import * as THREE from "three"
 import './posts.css';
+import ninos from '../images/ninos.jpeg'
 
     class Image extends Component {
         componentDidMount() {
-          const img = document.querySelector("postImg")
+          
             //Create the scene
             var scene = new THREE.Scene();
-    
+
+            const img = document.getElementById("postImg")
             //Create the camera
             var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.5, 1000);
-            camera.position.z = 5;
+            camera.position.z = 10;
     
             // Create the renderer and add it to the page's body element
             var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-            renderer.setSize(window.innerWidth*0.2, window.innerHeight*0.25, 0.5, 1000);
+            renderer.setSize(window.innerWidth*0.5, window.innerHeight, 0.5, 1000);
     
             img.appendChild(renderer.domElement);
 
@@ -23,25 +25,15 @@ import './posts.css';
             var loader = new THREE.TextureLoader();
 
             // Create the material
-            var geometry = new THREE.PlaneGeometry(5, 7, 50, 70)
+            var geometry = new THREE.PlaneGeometry(40, 20, 200, 200)
 
             // Create the material
             var material = new THREE.MeshBasicMaterial ({
-                map: loader.load( this.props.fluid )
+                map: loader.load( ninos )
             });
             // Create the image filter and add it to the scene
             var filter = new THREE.Mesh (geometry, material);
             scene.add( filter );
-            
-    
-             // add subtle ambient lighting
-            var ambientLight = new THREE.AmbientLight(0x555555);
-            scene.add(ambientLight);
-    
-            // add directional light source
-            var directionalLight = new THREE.DirectionalLight(0xffffff);
-            directionalLight.position.set(1, 1, 1).normalize();
-            scene.add(directionalLight);
 
             filter.rotation.set(-0.1, 0, 0)
 
@@ -51,10 +43,14 @@ import './posts.css';
                 const t = clock.getElapsedTime();
 
                 filter.geometry.vertices.map(v => {
-                    const waveX1 = 0.5 * Math.sin(v.x * 2 + t)
+                    const waveX1 = 0.1 * Math.sin(v.x * 5 + t)
+                    const waveX2 = 0.1 * Math.sin(v.x * 3 + t)
+                    const waveX3 = 0.1 * Math.sin(v.x * 2.3 + t)
                     const waveY1 = 0.1 * Math.sin(v.y * 5 + t)
+                    const waveY2 = 0.1 * Math.sin(v.x * 3 + t)
+                    const waveY3 = 0.1 * Math.sin(v.x * 1.5 + t)
 
-                    v.z = waveX1 + waveY1
+                    v.z = waveX1 + waveY1 + waveX2 + waveY2 + waveX3 + waveY3
                 })
 
                 filter.geometry.verticesNeedUpdate = true
@@ -72,7 +68,7 @@ import './posts.css';
         }
         render(){
             return (
-                <div ref={(mount) => { this.mount = mount }} className='postImg'>
+                <div ref={(mount) => { this.mount = mount }} id='postImg'>
                 </div>
             )
         }

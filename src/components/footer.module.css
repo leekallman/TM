@@ -12,27 +12,27 @@
     color:var(--black);
 }
 .footer h1{
-    font-size: 2rem;
-    cursor: pointer;
+    font-size: 54px;
+    letter-spacing: -1px;
+}
+.footer h1 span{
+    font-style: italic;
 }
 
-/* .footer a:hover{
-    color:#DD724B;
-} */
 
 .footer ul{
     list-style: none;
 }
 
 .footer p, .footer li{
-    font-size: 20px;
+    /* font-size: 18px; */
     margin:0;
 }
 
 .logo{
     grid-row: 1;
     grid-column: 4 / 10;
-    margin:4vh auto;
+    margin:2vh auto;
 }
 
 .about{
@@ -40,60 +40,128 @@
     grid-column: 2 / 6;
 }
 
-/* .tort {
-    grid-row: 2;
-    grid-column: 8 / 10;
-} */
-
 .column1{
     grid-row: 3;
     grid-column: 2 / 6;
 }
 .spinner{
     grid-row: 2;
-    grid-column: 8/ 10;
+    grid-column: 8/ 11;
     margin:auto;
 }
-
-
-
 .column2{
     grid-row: 3;
     grid-column: 8 / 10;
     text-align: center;
     margin:auto;
 }
-
 .column3{
     grid-row: 4;
     grid-column: 8 / 10;
 }
 
-
+.footer h2{
+    font-size: 54px;
+    letter-spacing: -1px;
+}
 .buy{
-    width: 20vw;
-    height: 10vh;
+    width: 26vw;
+    /* height: 15vh; */
     grid-row: 3;
     grid-column: 8 / 10;
-    margin: 1rem auto;
-    border: solid 1px var(--hero);
+    margin: 0 auto 1rem auto;
+    padding:30px 50px;
 }
 .buy a{
-    margin: auto;
     width: 100%;
-    text-align: center;
 }
-.buy:hover {
+.footer h2 {
+    border: solid 1px var(--hero);
+}
+
+.footer h2:hover {
     border: solid 1px var(--black);
 }
 
-@media only screen and (max-width: 900px) {
-    .about p{
-        font-size: 16px;
+
+@media only screen and (max-width: 1200px) {
+    .footer p, .footer li{
+        font-size: 18px;
     }
+    .logo{
+        margin:1vh auto;
+    }
+    .buy{
+        padding:0;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 920px) {
     .column2 h2{
         font-size: 40px;
-        letter-spacing: 0;
+    }
+    .footer p, .footer li{
+        line-height: 1.2;
+    }
+
+    .buy{
+        padding:0;
     }
 
 }
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer p, .footer li{
+        font-size: 16px;
+    }
+
+    .footer h1{
+        margin: 0 auto;
+    }
+
+    .about{
+        margin: 0.5rem 2rem 0 2rem;
+    }
+
+    .column1{
+        margin:0 2rem;
+    }
+    .buy{
+        margin: 0 auto;
+        width: 40vw;
+    }
+    ul{
+        margin-bottom:2rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .footer {
+        scroll-snap-align: none;
+    }
+    .footer h1, .footer h2{
+        font-size:24px;
+    }
+    .footer p, .footer li{
+        font-size: 14px;
+    }
+    .buy{
+        margin: 0 auto;
+        width: 60vw;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    .spinner{
+        display: none;
+    }
+}
+

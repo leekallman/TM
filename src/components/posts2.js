@@ -52,7 +52,7 @@ const Posts = () => {
                         <button className="readMoreBtn" onClick={toggler}><h2 className="readMore">Read more</h2></button>
                     </div>
                 
-                    <Image className="postImg" fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}/>
+                    <Image className="postImage" fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}/>
 
                     <div className={toggle ? 'hide' : 'postCopy'} >
                         <Close close={toggler} />

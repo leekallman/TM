@@ -20,62 +20,61 @@
     justify-content: space-around;
     display:flex;
     flex-direction: column;
+    height: 100vh;
 }
 /* article intro */
-.post:nth-child(1) .postCopy, .post:nth-child(3) .postCopy, .post:nth-child(5) .postCopy{
+.post:nth-child(1) .postCopy, .post:nth-child(3) .postCopy, .post:nth-child(5) .postCopy, .post:nth-child(7) .postCopy, .post:nth-child(9) .postCopy, .post:nth-child(11) .postCopy{
     background-color: var(--article1);
 }
-.post:nth-child(2) .postCopy, .post:nth-child(4) .postCopy{
+.post:nth-child(2) .postCopy, .post:nth-child(4) .postCopy, .post:nth-child(6) .postCopy, .post:nth-child(8) .postCopy, .post:nth-child(10) .postCopy{
     background-color: var(--article2);
 }
 
 /* article copy close buttons */
-.post:nth-child(1) .postCopy button, .post:nth-child(3) .postCopy button, .pos:nth-child(5) .postCopy button{
-    border: solid 1px var(--article1);
+.post:nth-child(1) .postCopy button, .post:nth-child(3) .postCopy button, .post:nth-child(5) .postCopy button, .pos:nth-child(7) .postCopy button, .pos:nth-child(9) .postCopy button, .pos:nth-child(11) .postCopy button{
+    border: none
 }
-.post:nth-child(2) .postCopy button, .post:nth-child(4) .postCopy  button{
-    border: solid 1px var(--article2);
+.post:nth-child(2) .postCopy button, .post:nth-child(4) .postCopy  button, .post:nth-child(6) .postCopy  button, .post:nth-child(8) .postCopy  button, .post:nth-child(10) .postCopy  button{
+    border: none
 }
-.post:nth-child(1) .postCopy button:hover, .post:nth-child(3) .postCopy button:hover, .post:nth-child(5) .postCopy button:hover{
-    cursor: pointer;
-}
-.post:nth-child(2) .postCopy button:hover, .post:nth-child(4) .postCopy button:hover{
-    cursor: pointer;
-}
-
-.post:nth-child(1) .hide button, .post:nth-child(3) .hide button, .pos:nth-child(5) .hide button{
+.post:nth-child(1) .postCopy button:hover, .post:nth-child(3) .postCopy button:hover, .post:nth-child(5) .postCopy button:hover, .post:nth-child(7) .postCopy button:hover, .post:nth-child(9) .postCopy button:hover, .post:nth-child(11) .postCopy button:hover{
+    cursor: url('../images/cursor-finger.svg'),auto;
     border: none;
 }
-.post:nth-child(2) .hide button, .post:nth-child(4) .hide button{
+.post:nth-child(2) .postCopy button:hover, .post:nth-child(4) .postCopy button:hover, .post:nth-child(6) .postCopy button:hover, .post:nth-child(8) .postCopy button:hover, .post:nth-child(10) .postCopy button:hover{
+    cursor: url('../images/cursor-finger.svg'),auto;
     border: none;
 }
 
-
-/* .postCopy{
-    background-color:#cfb493;
-} */
+.post:nth-child(1) .hide button, .post:nth-child(3) .hide button, .post:nth-child(5) .hide button, .pos:nth-child(7) .hide button, .pos:nth-child(9) .hide button,.pos:nth-child(11) .hide button{
+    border: none;
+}
+.post:nth-child(2) .hide button, .post:nth-child(4) .hide button, .post:nth-child(6) .hide button, .post:nth-child(8) .hide button,.post:nth-child(10) .hide button{
+    border: none;
+}
 
 /* article cover */
-.post:nth-child(1), .post:nth-child(3), .post:nth-child(5) {
+.post:nth-child(1), .post:nth-child(3), .post:nth-child(5), .post:nth-child(7), .post:nth-child(9),.post:nth-child(11){
     background-color: var(--article1);
 }
-.post:nth-child(2), .post:nth-child(4){
+.post:nth-child(2), .post:nth-child(4), .post:nth-child(8), .post:nth-child(8), .post:nth-child(10){
     background-color: var(--article2);
 }
 
 /* article cover buttons */
-.post:nth-child(1) button, .post:nth-child(3) button, .post:nth-child(5) button{
+.post:nth-child(1) button, .post:nth-child(3) button, .post:nth-child(5) button, .post:nth-child(7) button, .post:nth-child(9) button, .post:nth-child(11) button{
     border: solid 1px var(--article1);
 }
-
-.post:nth-child(2) button, .post:nth-child(4) button{
+.post:nth-child(2) button, .post:nth-child(4) button, .post:nth-child(6) button, .post:nth-child(8) button, .post:nth-child(10) button{
     border: solid 1px var(--article2);
 }
 
+/* cover */
 .postDescrip h2{
     margin: auto;
 }
 
+/* modal */
 .postCopy{
     position: absolute;
     top: 0;
@@ -86,7 +85,6 @@
     padding:3rem 5rem;
     transition: opacity 0.5s ease-in-out;
 }
-
 .copy{
     text-align: left;
 }
@@ -103,8 +101,10 @@
     transition: opacity 0.3s ease-in-out;
  }
 
-h4{
-    margin:1rem;
+ .postCopy h4, .hide h4{
+    position: absolute;
+    bottom:2rem;
+    left:30%;
 }
 
 button{
@@ -114,17 +114,16 @@ button{
     font-family: Spectral;
     background: none;
     outline: none;
-    /* border: solid 1px #cfb493; */
 }
 
 .post button:hover{
     border: solid 1px var(--black);
-    cursor: pointer;
+    cursor: url('../images/cursor-finger.svg'),auto;
 }
 
 
 @media only screen and (max-width: 1200px) {
-    .postCopy{
+    .postCopy, .hide{
         font-size: 16px;
         padding:2rem 3rem;
     }
@@ -132,7 +131,7 @@ button{
 }
 
 @media only screen and (max-width: 1000px) {
-    .postCopy{
+    .postCopy, .hide{
         padding:1rem 2rem;
     }    
     .postCopy h3{
@@ -152,6 +151,7 @@ button{
         grid-row:1;
         grid-column:1;
     }
+
     .postImg{ 
         grid-row:1;
         height:100vh;
@@ -162,23 +162,29 @@ button{
     }
 
     .postCopy{
-        top: 0;
+        top: -100%;
         left: 0;
         width: 100vw;
         font-size: 18px;
         padding:3rem 5rem;
+        position: relative;
     }
     .postCopy h3{
         max-width: 40vw;
     }
 
-    h4{
-        margin:2rem;
+    .postCopy h4{
+        position: absolute;
+        bottom:3vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        margin:0;
     }
     .hide {
         top: 0;
         left: 0;
         width: 100vw;
+        z-index: 0;
      }
 
    
@@ -187,15 +193,56 @@ button{
     }
 
     /* article cover buttons */
-    .post:nth-child(1) button, .post:nth-child(3) button, .post:nth-child(5) button{
+    .post:nth-child(1) button, .post:nth-child(3) button, .post:nth-child(5) button, .post:nth-child(7) button, .post:nth-child(9) button, .post:nth-child(11) button{
         border: none;
     }
 
-    .post:nth-child(2) button, .post:nth-child(4) button{
+    .post:nth-child(2) button, .post:nth-child(4) button, .post:nth-child(6) button, .post:nth-child(8) button,.post:nth-child(10) button,.post:nth-child(12) button{
         border: none;
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
+    .postCopy{
+        font-size: 18px;
+        padding:1rem 3rem;
+    
+    }
+    .postCopy h3{
+        max-width: 40vw;
+    }
 
+}
+@media only screen and (max-width: 600px) {
+    .postCopy{
+        font-size: 16px;
+    }
+    .postCopy h3{
+        max-width: 70vw;
+    }
+    .postDescrip h2{
+        font-size: 40px;
+        max-width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 485px) {
+.post {
+    scroll-snap-align: none;
+}
+
+    .postCopy{
+        padding:1rem 2rem;
+        font-size: 13px;
+    }
+    .postCopy h3{
+        max-width: 80vw;
+        font-size: 14px;
+        margin: 1rem auto;
+    }
+
+
+    .postCopy h4{
+        bottom:1vh;
+    }
 }

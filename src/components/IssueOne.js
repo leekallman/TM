@@ -8,20 +8,22 @@ import bottom from '../images/bottom.svg'
 
 class IssueOne extends Component {
     componentDidMount() {
-      const canvas = document.getElementById("canvas")
+      
         //Create the scene
         var scene = new THREE.Scene();
 
+        const canvas = document.getElementById("canvas")
+        canvas.width = canvas.clientWidth;
+        canvas.height = canvas.clientHeight;
 
         //Create the camera
-        var camera = new THREE.PerspectiveCamera(65, window.innerWidth/window.innerHeight, 0.5, 1000);
-        camera.position.z = 4;
+        var camera = new THREE.PerspectiveCamera(65, canvas.clientWidth/canvas.clientHeight, 0.5, 1000);
+        camera.position.z = 5;
 
         // Create the renderer and add it to the page's body element
         var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-        renderer.setSize(window.innerWidth*0.2, window.innerHeight*0.25);
-        renderer.setPixelRatio( window.devicePixelRatio );
-        renderer.setClearColor( 0xffffff, 0);
+        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+        renderer.setPixelRatio(window.devicePixelRatio );
 
         canvas.appendChild(renderer.domElement);
         // document.body.appendChild(renderer.domElement);
@@ -92,7 +94,7 @@ class IssueOne extends Component {
 
     render(){
         return (
-         <div ref={(mount) => { this.mount = mount }} id='canvas'>
+         <div style={{ width: "150px", height: "200px" }} ref={(mount) => { this.mount = mount }} id='canvas'>
          </div>
         )
   }
