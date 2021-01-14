@@ -13,12 +13,12 @@
 }
 .footer h1{
     font-size: 54px;
+    margin:18px auto;
     letter-spacing: -1px;
 }
 .footer h1 span{
     font-style: italic;
 }
-
 
 .footer ul{
     list-style: none;
@@ -32,7 +32,7 @@
 .logo{
     grid-row: 1;
     grid-column: 4 / 10;
-    margin:2vh auto;
+    margin:0 auto;
 }
 
 .about{
@@ -63,7 +63,12 @@
 .footer h2{
     font-size: 54px;
     letter-spacing: -1px;
+    border: solid 1px var(--hero);
 }
+.footer h2:hover {
+    border: solid 1px var(--black);
+}
+
 .buy{
     width: 26vw;
     /* height: 15vh; */
@@ -75,13 +80,8 @@
 .buy a{
     width: 100%;
 }
-.footer h2 {
-    border: solid 1px var(--hero);
-}
 
-.footer h2:hover {
-    border: solid 1px var(--black);
-}
+
 
 
 @media only screen and (max-width: 1200px) {

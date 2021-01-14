@@ -7,9 +7,8 @@ import IssueOne from '../components/IssueOne';
 const Footer = () => {
     return(
         <footer className={footerStyles.footer} id="footer">
-            <Link to='top' smooth={true} className={footerStyles.logo}><h1><span>Tort</span> Magazine
-            </h1></Link>
-
+            <a href="#" className={footerStyles.logo}><h1><span>Tort</span> Magazine
+            </h1></a>
             <div className={footerStyles.spinner}> 
                 <IssueOne className={footerStyles.issue}/>
             </div>

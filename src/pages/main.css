@@ -18,11 +18,16 @@ html {
     scroll-snap-type: y mandatory;
 }
 
+
 body{
     font-family: 'Spectral', serif;
     font-weight: 200;
     cursor: url('../images/cursor.png'),auto;
     overflow-x: hidden;
+
+}
+html, body {
+    overscroll-behavior: none;
 }
 
 /* .scroll-block{
@@ -84,11 +89,3 @@ canvas{
         max-width: 60vw;
     }
 }
-
-/* @media only screen and (max-width: 400px) {
-    section{
-        scroll-snap-type: none;
-        scroll-snap-align: 
-    }
-}
- */

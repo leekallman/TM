@@ -10,11 +10,11 @@
 
 .spread, video{
     max-width: 70vw;
-    margin: 100px auto 50px auto;
+    margin: 130px auto 50px auto;
 }
 
 .purchase{
-    margin:0 auto 100px auto;
+    margin:0 auto 400px auto;
     border: solid 1px var(--hero);
     padding:10px 50px;
 }

@@ -16,15 +16,13 @@ return (
         <div className={heroStyles.hero}>
             {/* <Header /> */}
             {/* <img src={spread} className={heroStyles.spread} alt="example spread" width="700px"/> */}
-            <video controls width="600px">
+            <video autoPlay width="600px">
             <source src={video} type="video/mp4" />
             </video>
             
             <a className={heroStyles.purchase} href="/#footer"><h2>Purchase</h2></a>
         </div>
-        {/* ) 
-    }; */}
     </div>
 )
 }
-        export default Hero
+export default Hero
