@@ -15,7 +15,7 @@
 .mainLogo{
     width: 100vw;
     z-index: 11;
-    position: fixed;
+    position: absolute;
     animation: scale 5s forwards;
     margin:10px 0;
     letter-spacing: -1px;
@@ -75,20 +75,45 @@
 
 
 @media only screen and (max-width: 1200px) {
-    .logo, .about{
-        /* font-size: 32px; */
+    .wallpaper{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10vh 10vh 12vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
     }
+    .wallpaper h1:nth-child(3){
+        opacity:1;
+    }
+    .wallpaper h1:nth-child(2){
+        opacity:0;
+    }
+
+    @keyframes scale {
+        0% {transform: scale(1,1)}
+        25% {transform: scale(1,1)}
+        100% {transform: scale(1.53,1.53) translate(0, 100%);
+            } 
+     } 
 }
 
 
 
 @media only screen and (max-width: 900px) {
-    .logo, .about{
-        /* font-size: 32px; */
+    .wallpaper{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 12vh 12vh 15vh 12vh 12vh 12vh 12vh 12vh;
     }
+
 }
 
 @media only screen and (max-width: 700px) {
+    @keyframes scale {
+        0% {transform: scale(0.5,0.5)}
+        25% {transform: scale(0.5,0.5)}
+        100% {transform: scale(1.2,1.2) translate(0, 25%);
+            } 
+     }
+
+
+
     .logo, .about{
         font-size: 18px;
         letter-spacing: 0;

@@ -123,23 +123,6 @@ button{
 
 
 @media only screen and (max-width: 1200px) {
-    .postCopy, .hide{
-        font-size: 16px;
-        padding:2rem 3rem;
-    }
-    
-}
-
-@media only screen and (max-width: 1000px) {
-    .postCopy, .hide{
-        padding:1rem 2rem;
-    }    
-    .postCopy h3{
-        margin: 1rem auto 2rem auto;
-    }
-}
-
-@media only screen and (max-width: 900px) {
     .post{
         display:grid;
         grid-template-columns: 1;
@@ -165,12 +148,14 @@ button{
         top: -100%;
         left: 0;
         width: 100vw;
-        font-size: 18px;
-        padding:3rem 5rem;
+        font-size: 24px;
+        padding:4rem 6rem;
         position: relative;
     }
     .postCopy h3{
-        max-width: 40vw;
+        max-width: 60vw;
+        font-size: 24px;
+        margin:1vh auto 4vh auto;
     }
 
     .postCopy h4{
@@ -200,6 +185,21 @@ button{
     .post:nth-child(2) button, .post:nth-child(4) button, .post:nth-child(6) button, .post:nth-child(8) button,.post:nth-child(10) button,.post:nth-child(12) button{
         border: none;
     }
+    .postDescrip h2{
+        max-width: 60vw;
+    }
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .postCopy, .hide{
+        padding:2rem 4rem;
+    }    
+    .postCopy h3{
+        margin: 1rem auto 2rem auto;
+        font-size: 20px;  
+}
 }
 
 @media only screen and (max-width: 760px) {
