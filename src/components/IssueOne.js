@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import * as THREE from "three"
-import front from '../images/front.svg'
-import spine from '../images/spine.svg'
-import back from '../images/back.svg'
-import side from '../images/side.svg'
-import bottom from '../images/bottom.svg'
+import front from '../images/front.png'
+import spine from '../images/spine.png'
+import back from '../images/back.png'
+import side from '../images/side.png'
+import bottom from '../images/bottom.png'
 
 class IssueOne extends Component {
     componentDidMount() {
@@ -30,10 +30,10 @@ class IssueOne extends Component {
 
         // Load the textures (book images)
         var textureLoader = new THREE.TextureLoader();
-        var bookCoverTexture = textureLoader.load( front);
-        var bookSpineTexture = textureLoader.load( spine);
-        var bookBackTexture = textureLoader.load( back );
-        var bookPagesTexture = textureLoader.load( side );
+        var bookCoverTexture = textureLoader.load(front);
+        var bookSpineTexture = textureLoader.load(spine);
+        var bookBackTexture = textureLoader.load(back);
+        var bookPagesTexture = textureLoader.load(side);
         var bookPagesTopBottomTexture = textureLoader.load( bottom );
 
 
@@ -45,7 +45,7 @@ class IssueOne extends Component {
           = bookPagesTopBottomTexture.minFilter
           = THREE.LinearFilter;
 
-          // Create the materials
+        // Create the materials
         var bookCover = new THREE.MeshLambertMaterial( { color: 0xffffff, map: bookCoverTexture } );
         var bookSpine = new THREE.MeshLambertMaterial( { color: 0xffffff, map: bookSpineTexture } );
         var bookBack = new THREE.MeshLambertMaterial( { color: 0xffffff, map: bookBackTexture } );
@@ -62,7 +62,7 @@ class IssueOne extends Component {
         ];
 
         // Create the book and add it to the scene
-        var book = new THREE.Mesh( new THREE.BoxGeometry( 3.5, 4, 0.3 ), materials );
+        var book = new THREE.Mesh( new THREE.BoxGeometry( 2.5, 4, 0.2 ), materials );
         scene.add( book );
         // width, height, depth
 

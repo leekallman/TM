@@ -6,7 +6,9 @@ import cancel from '../images/cancel.png'
 const Close = ({close}) => {
 
     return (
-        <button onClick={close} className={closeStyles.closeBtn}><img src={cancel}/></button>
+        <button aria-label="Close" onClick={close} className={closeStyles.closeBtn}>
+            <img alt="close-button" src={cancel}/>
+        </button>
     )
 }
 

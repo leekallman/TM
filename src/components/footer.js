@@ -1,13 +1,12 @@
 import React from 'react';
 import footerStyles from './footer.module.css';
-import { Link } from 'react-scroll'
 import IssueOne from '../components/IssueOne';
 
 
 const Footer = () => {
     return(
         <footer className={footerStyles.footer} id="footer">
-            <a href="#" className={footerStyles.logo}><h1><span>Tort</span> Magazine
+            <a href="#top" className={footerStyles.logo}><h1><span>Tort</span> Magazine
             </h1></a>
             <div className={footerStyles.spinner}> 
                 <IssueOne className={footerStyles.issue}/>
@@ -41,8 +40,8 @@ const Footer = () => {
                 </div>
                 <ul>
                 <li><a href="mailto:contact@tortmagazine.com">contact@tortmagazine.com</a></li>
-                <li><a href="https://instagram.com/tort_magazine" target="_blank" >instagram</a></li>
-                <li><a href="https://facebook.com/tortmagazine" target="_blank" >facebook</a></li>
+                <li><a href="https://instagram.com/tort_magazine" target="_blank" rel="noreferrer">instagram</a></li>
+                <li><a href="https://facebook.com/tortmagazine" target="_blank" rel="noreferrer">facebook</a></li>
                 </ul>
             </div> 
         </footer>

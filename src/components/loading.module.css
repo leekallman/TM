@@ -94,14 +94,11 @@
      } 
 }
 
-
-
 @media only screen and (max-width: 900px) {
     .wallpaper{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 12vh 12vh 15vh 12vh 12vh 12vh 12vh 12vh;
     }
-
 }
 
 @media only screen and (max-width: 700px) {
@@ -111,8 +108,6 @@
         100% {transform: scale(1.2,1.2) translate(0, 25%);
             } 
      }
-
-
 
     .logo, .about{
         font-size: 18px;

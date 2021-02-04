@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, graphql, useStaticQuery} from "gatsby"
+import {Link} from "gatsby"
 import headerStyles from './header.module.css';
 // import { library } from '@fortawesome/fontawesome-svg-core'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
