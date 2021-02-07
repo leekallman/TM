@@ -29,7 +29,10 @@ module.exports.createPages = async ({ graphql, actions}) => {
             }
         }
     }
-    `) 
+    `).then(res =>{
+        if (res.rrors){
+            return Promise.reject(res.errors)
+        }
     res.data.allMarkdownRemark.edges.forEach((edge) => {
         createPage({
             component: postTemplate,
@@ -39,4 +42,5 @@ module.exports.createPages = async ({ graphql, actions}) => {
             }
         })
     })
+})
 }

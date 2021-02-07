@@ -38,11 +38,9 @@
     border: none
 }
 .post:nth-child(1) .postCopy button:hover, .post:nth-child(3) .postCopy button:hover, .post:nth-child(5) .postCopy button:hover, .post:nth-child(7) .postCopy button:hover, .post:nth-child(9) .postCopy button:hover, .post:nth-child(11) .postCopy button:hover{
-    cursor: url('../images/cursor-finger.svg'),auto;
     border: none;
 }
 .post:nth-child(2) .postCopy button:hover, .post:nth-child(4) .postCopy button:hover, .post:nth-child(6) .postCopy button:hover, .post:nth-child(8) .postCopy button:hover, .post:nth-child(10) .postCopy button:hover{
-    cursor: url('../images/cursor-finger.svg'),auto;
     border: none;
 }
 
@@ -64,9 +62,11 @@
 /* article cover buttons */
 .post:nth-child(1) button, .post:nth-child(3) button, .post:nth-child(5) button, .post:nth-child(7) button, .post:nth-child(9) button, .post:nth-child(11) button{
     border: solid 1px var(--article1);
+    border-radius: 50px;
 }
 .post:nth-child(2) button, .post:nth-child(4) button, .post:nth-child(6) button, .post:nth-child(8) button, .post:nth-child(10) button{
     border: solid 1px var(--article2);
+    border-radius: 50px;
 }
 
 /* cover */
@@ -118,7 +118,6 @@ button{
 
 .post button:hover{
     border: solid 1px var(--black);
-    cursor: url('../images/cursor-finger.svg'),auto;
 }
 
 
@@ -234,7 +233,9 @@ button{
     .postCopy{
         padding:1rem 2rem;
         font-size: 13px;
+        min-height: 100vh;
     }
+   
     .postCopy h3{
         max-width: 80vw;
         font-size: 14px;

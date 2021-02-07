@@ -17,7 +17,6 @@ import Footer from '../components/footer'
           </section>
 
           <Posts />
-
           <section>
             <Footer />
           </section>

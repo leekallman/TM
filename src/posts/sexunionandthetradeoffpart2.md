@@ -1,5 +1,6 @@
 ---
-title: "Sex, Union and the Trade-Off Part II"
+id: "3"
+title: "Sex, Union and the Trade-Off Part I"
 name: "Daniel Rajcsanyi"
 date: "2020-01-03"
 details: "INTERVIEW by Ashik Zaman PHOTOGRAPHY by Daniel Rajcsanyi"

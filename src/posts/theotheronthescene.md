@@ -1,4 +1,5 @@
 ---
+id: "2"
 title: "The Other on the Scene"
 name: "Ninos Josef"
 date: "2020-01-05"

@@ -21,12 +21,11 @@ const Footer = () => {
             <div className={footerStyles.column1}>
                 <p>
                     Editorial: Liz Olofsson, Lisa Lee, Marta Casagrande, Tor Westerlund<br/><br/>
-                    Contributors: Ashik Zaman, Riin Raanu, Maja Winberg, Thulani Gushman, Clarice Goulart.<br/>
-                    <br/>
-                    Photographers: William Harvey Howe, Emilia Stålhammar
+                    Contributors: Ashik Zaman, Riin Raanu, Maja Winberg, Thulani Gushman, Clarice Goulart, William Harvey Howe, Emilia Stålhammar
                     <br/><br/>
-                    208 pp, 22 × 28 cm, softcover, 2019.<br/>
-                    ISBN 978-3-95679-579-4<br/>
+                    112 pp, 16 × 22 cm, softcover: Munken Lynx 240g, 2021.<br/>
+                    Binding: Sewed glue binding<br/>
+                    ISBN 2003-8003<br/>
                     100SEK
                     {/* <a className={footerStyles.purchase} href="/">BUY NOW</a>    */}
                 </p>

@@ -25,17 +25,13 @@ html {
 body{
     font-family: 'Spectral', serif;
     font-weight: 200;
-    cursor: url('../images/cursor.png'),auto;
+    cursor: url('../images/cursor.png'), auto;
     overflow-x: hidden;
 
 }
 html, body {
     overscroll-behavior: none;
 }
-
-/* .scroll-block{
-    overflow: hidden;
-} */
 
 section{
     scroll-snap-align: start;
@@ -48,14 +44,11 @@ h1, h2, h3, h4{
 
 Link, a {
     text-decoration: none;
-    cursor: url('../images/cursor-finger.svg'),auto;
+    /* cursor: url('../images/cursor-finger.svg'),auto; */
 }
 
 Link:visited, a:visited{
     color: black;
-}
-Link:hover, a:hover{
-cursor: url('../images/cursor-finger.svg'),auto;
 }
 
 p{

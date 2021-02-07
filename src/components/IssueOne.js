@@ -17,7 +17,7 @@ class IssueOne extends Component {
         canvas.height = canvas.clientHeight;
 
         //Create the camera
-        var camera = new THREE.PerspectiveCamera(65, canvas.clientWidth/canvas.clientHeight, 0.5, 1000);
+        var camera = new THREE.PerspectiveCamera(85, canvas.clientWidth/canvas.clientHeight, 0.5, 1500);
         camera.position.z = 5;
 
         // Create the renderer and add it to the page's body element
@@ -62,7 +62,7 @@ class IssueOne extends Component {
         ];
 
         // Create the book and add it to the scene
-        var book = new THREE.Mesh( new THREE.BoxGeometry( 2.5, 4, 0.2 ), materials );
+        var book = new THREE.Mesh( new THREE.BoxGeometry( 3.5, 5, 0.2 ), materials );
         scene.add( book );
         // width, height, depth
 
@@ -94,7 +94,7 @@ class IssueOne extends Component {
 
     render(){
         return (
-         <div style={{ width: "150px", height: "200px" }} ref={(mount) => { this.mount = mount }} id='canvas'>
+         <div style={{ width: "250px", height: "300px" }} ref={(mount) => { this.mount = mount }} id='canvas'>
          </div>
         )
   }

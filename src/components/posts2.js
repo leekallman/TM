@@ -10,6 +10,7 @@ const Posts = () => {
     const toggler = () => {
         setToggle(prev => !prev)
     } 
+
     
     const data = useStaticQuery(graphql`
         query {

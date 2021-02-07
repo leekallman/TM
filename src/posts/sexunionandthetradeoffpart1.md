@@ -1,5 +1,6 @@
 ---
-title: "Sex, Union and the Trade-Off Part I"
+id: "4"
+title: "Sex, Union and the Trade-Off Part II"
 name: "Emma von Linné"
 date: "2020-01-02"
 details: "INTERVIEW by Lizette Olofsson ILLUSTRATIONS by Marta Casagrande"
