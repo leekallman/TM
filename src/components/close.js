@@ -1,6 +1,6 @@
 
 import React from "react"
-import closeStyles from './close.module.css';
+import closeStyles from './close.module.css'
 import cancel from '../images/cancel.png'
 
 const Close = ({close}) => {
