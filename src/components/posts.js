@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 import './posts.css';
-import Close from '../components/Close';
+// import Close from '../components/Close';
 
 
 const Posts = () => {
