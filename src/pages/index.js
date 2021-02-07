@@ -1,56 +1,27 @@
-import React from "react"
-import { Link, graphql, useStaticQuery } from 'gatsby'
-import Header from '../components/header.js';
-import Hero from '../components/hero.js';
-import Post from '../components/post.js';
-import './main.css';
+import React, {useEffect} from "react"
+import './main.css'
+import Hero from '../components/hero.js'
+import Posts from '../components/posts.js'
+import Footer from '../components/footer'
+  
+    const IndexPage = (props) => {
 
-const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-            name
-            details
-          }
-          fields {
-            slug
-          }
-        }
-      }
+      useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
+      return (
+        <div className="root">
+          <section className="home"> 
+            <Hero />
+          </section>
+
+          <Posts />
+          <section>
+            <Footer />
+          </section>
+        </div>  
+        );
     }
-  }
-  `)
-
-  return (
-    <React.Fragment>
-
-    <div className="root">
-      <Header />
-
-      <Hero />
-      <ol>
-        {data.allMarkdownRemark.edges.map((edge) => {
-
-          return (
-            <li>
-              <h2>{edge.node.frontmatter.title}</h2>
-              <p>{edge.node.frontmatter.name}</p>
-              <Link to={`/post/${edge.node.fields.slug}`}>Read more</Link>
-            </li>
-          )
-        })}
-      </ol>
-      
-
-    </div>
-  
-  
-    </React.Fragment>
-  );
-}
-
+          
 export default IndexPage;

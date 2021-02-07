@@ -1,9 +1,72 @@
 .hero {
     width: 100vw;
+    height:100vh;
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    scroll-snap-align: start;
+    background-color:var(--hero);
 }
 
-.spread{
-    max-width: 70vw;
-    margin:auto;
+.gif{
+    margin: 200px auto 100px auto;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
+}
+
+.purchase{
+    margin:0 auto;
+    border: solid 1px transparent;
+    padding:10px 50px;
+    border-radius: 50px;
+    font-family: Helvetica neue, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.purchase:hover {
+    border: solid 1px var(--black)
+}
+
+@media only screen and (max-width: 1200px) {
+    .gif{
+        width: 800px;
+        max-width:100%;
+        margin: 400px auto 200px auto;
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .gif{
+        width: 600px;
+        max-width:100%;
+        margin: 300px auto 100px auto;
+
+    }
+    
+}
+
+@media only screen and (max-width: 760px) {
+    .gif{
+        width: 300px;
+        margin: 200px auto 100px auto;
+
+    }
+    h2{
+        font-size:42px;
+        letter-spacing: -1px;
+    }
+    
+}
+@media only screen and (max-width: 320px) {
+    .gif{
+        width: 250px;
+        margin: 150px auto 100px auto;
+
+    }
+    h2{
+        font-size:42px;
+        letter-spacing: -1px;
+    }
+    
 }
