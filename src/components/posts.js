@@ -72,7 +72,7 @@ import './posts.css';
 // export default Posts;
 
 const Posts = () => {
-    const [toggle, setToggle] = useState ([]);      
+    // const [toggle, setToggle] = useState (true);      
     
     const data = useStaticQuery(graphql`
         query {
@@ -82,6 +82,7 @@ const Posts = () => {
                 edges {
                     node {
                         frontmatter {
+                            id
                             title
                             name
                             details
@@ -108,11 +109,10 @@ const Posts = () => {
             <ul className="post-list">
             {data.allMarkdownRemark.edges.map((edge) => (
                     <Post 
-                    key={edge.node.frontmatter.id} 
+                    id={edge.node.frontmatter.id} 
                     data={data} 
-
-                    toggle={toggle} 
-                    setToggle={setToggle} 
+                    // toggle={toggle} 
+                    // setToggle={setToggle} 
                     title={edge.node.frontmatter.title}
                     name={edge.node.frontmatter.name}
                     image={edge.node.frontmatter.featuredImage.childImageSharp.fluid}

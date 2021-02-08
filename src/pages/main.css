@@ -5,10 +5,8 @@
     box-sizing: border-box;
 }
 :root {
-    /* --article1: #cfb493; */
     --article1: #DD724B;
     --article2: #506944;
-    /* --hero: #EF3B2E; */
     --hero: #F3B646;
     --white: #ffffff;
     --black: #000000;
