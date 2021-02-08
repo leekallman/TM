@@ -5,7 +5,11 @@
     flex-direction: column;
     text-align: center;
     scroll-snap-align: start;
-    background-color:var(--hero);
+    /* background-color:var(--hero); */
+    background-image: url(../images/helicopter.jpg);
+    background-size: 25%;
+    background-position: center;
+    /* background-repeat: no-repeat; */
 }
 
 .gif{
@@ -25,6 +29,9 @@
 }
 
 @media only screen and (max-width: 1200px) {
+    .hero{
+        background-size: 50%;
+    }
     .gif{
         width: 800px;
         max-width:100%;
