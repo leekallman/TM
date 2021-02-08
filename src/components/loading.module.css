@@ -19,7 +19,7 @@
     z-index: 11;
     position: absolute;
     animation: scale 3s ease-in-out forwards;
-    margin:5vh auto;
+    margin:6vh auto;
     letter-spacing: -1px;
     font-size: 36px;
 }
@@ -44,8 +44,6 @@
         position: absolute;
         } 
  } 
-
-
 
 .logo{
     font-size: 36px;
@@ -90,6 +88,15 @@
         opacity:0;
     }
 
+    .mainLogo{
+        margin-top:5vh;
+    }
+    .about{
+        margin-left:6vw;
+    }
+
+
+
     @keyframes scale {
         0% {transform: scale(1,1)}
         25% {transform: scale(1,1)}
@@ -102,6 +109,9 @@
     .wallpaper{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 12vh 12vh 15vh 12vh 12vh 12vh 12vh 12vh;
+    }
+    .mainLogo{
+        margin-top:6vh;
     }
 }
 
@@ -118,4 +128,10 @@
         letter-spacing: 0;
     }
 
+}
+
+@media only screen and (max-width: 450px) {
+.mainLogo{
+    margin-top:4.5vh;
+}
 }

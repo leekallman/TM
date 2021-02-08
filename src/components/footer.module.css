@@ -141,7 +141,7 @@
 
 @media only screen and (max-width: 450px) {
     .footer {
-        height: 120vh;
+        height: 130vh;
         scroll-snap-align: none;
     }
     .footer h1, .footer h2{
@@ -156,10 +156,9 @@
     }
 }
 
-
-/* @media only screen and (max-width: 375px) {
-    .spinner{
-        display: none;
+@media only screen and (max-width: 375px) {
+    .footer {
+        height: 180vh;
     }
-} */
+}
 

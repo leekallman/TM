@@ -43,7 +43,7 @@ h1, h2, h3, h4{
 
 Link, a {
     text-decoration: none;
-    /* cursor: url('../images/cursor-finger.svg'),auto; */
+    color: black;
 }
 
 Link:visited, a:visited{
@@ -53,6 +53,7 @@ Link:visited, a:visited{
 p{
     letter-spacing: -1px;
 }
+
 p:hover, li:hover{
     cursor: url('../images/cursor-white.svg'), auto;
 }
@@ -81,6 +82,6 @@ canvas{
 @media only screen and (max-width: 900px) {
     h2{
         letter-spacing: -3px;
-        max-width: 60vw;
+        max-width: 80vw;
     }
 }

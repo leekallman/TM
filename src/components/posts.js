@@ -1,18 +1,78 @@
-import React, { useState } from "react"
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from "gatsby-image"
+import React, { useState } from "react";
+import { graphql, useStaticQuery } from 'gatsby';
+import Post from "./post.js";
 import './posts.css';
-// import Close from '../components/Close';
-import closeStyles from './close.module.css'
-import cancel from '../images/cancel.png'
 
+
+// const Posts = () => {
+//     const [toggle, setToggle] = useState (true);
+      
+//     const toggler = () => {
+//         setToggle(prev => !prev)
+//     } 
+    
+//     const data = useStaticQuery(graphql`
+//         query {
+//             allMarkdownRemark (
+//                 sort: { order: DESC, fields: [frontmatter___date] }
+//                 ){
+//                 edges {
+//                     node {
+//                         frontmatter {
+//                             title
+//                             name
+//                             details
+//                             featuredImage {
+//                                 childImageSharp {
+//                                     fluid(maxWidth: 800) {
+//                                         ...GatsbyImageSharpFluid
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                         html
+//                         fields {
+//                             slug
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     `)
+    
+//     return (
+//         <section className="posts">
+//         {data.allMarkdownRemark.edges.map((edge) => {
+//             return (
+//                 <div className="post">
+//                     <div className="postDescrip">
+//                         <h2 className="postTitle">{edge.node.frontmatter.title}</h2>
+//                         <h2 className="name">{edge.node.frontmatter.name}</h2>
+
+//                         <button className="readMoreBtn" onClick={toggler}>{toggle ? <h2 className="readMore">Read more</h2> : <h2 className="readMore">Read less</h2>} 
+//                         </button>
+//                     </div>
+                
+//                     <Img className="postImg" fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} /> 
+
+//                     <div className={toggle ? 'hide' : 'postCopy'} >
+//                         <button aria-label="Close" onClick={toggler} className="closeBtn">
+//                             <img alt="close-button" src={cancel}/>
+//                         </button>
+//                         <h3>{edge.node.frontmatter.details}</h3>
+//                         <div className="copy" dangerouslySetInnerHTML= {{__html: edge.node.html}}></div>
+//                         <a href="/#footer"><h4>Read the full article in Issue One</h4></a>
+//                     </div>
+//                 </div>
+//             )}
+//         )}
+//         </section>
+//     )
+// }
+// export default Posts;
 
 const Posts = () => {
-    const [toggle, setToggle] = useState (true);
-      
-    const toggler = () => {
-        setToggle(prev => !prev)
-    } 
+    const [toggle, setToggle] = useState ([]);      
     
     const data = useStaticQuery(graphql`
         query {
@@ -45,30 +105,22 @@ const Posts = () => {
     
     return (
         <section className="posts">
-        {data.allMarkdownRemark.edges.map((edge) => {
-            return (
-                <div className="post">
-                    <div className="postDescrip">
-                        <h2 className="postTitle">{edge.node.frontmatter.title}</h2>
-                        <h2 className="name">{edge.node.frontmatter.name}</h2>
+            <ul className="post-list">
+            {data.allMarkdownRemark.edges.map((edge) => (
+                    <Post 
+                    key={edge.node.frontmatter.id} 
+                    data={data} 
 
-                        <button className="readMoreBtn" onClick={toggler}>{toggle ? <h2 className="readMore">Read more</h2> : <h2 className="readMore">Read less</h2>} 
-                        </button>
-                    </div>
-                
-                    <Img className="postImg" fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} /> 
-
-                    <div className={toggle ? 'hide' : 'postCopy'} >
-                        <button aria-label="Close" onClick={toggler} className={closeStyles.closeBtn}>
-                            <img alt="close-button" src={cancel}/>
-                        </button>
-                        <h3>{edge.node.frontmatter.details}</h3>
-                        <div className="copy" dangerouslySetInnerHTML= {{__html: edge.node.html}}></div>
-                        <a href="/#footer"><h4>Read the full article in Issue One</h4></a>
-                    </div>
-                </div>
-            )}
-        )}
+                    toggle={toggle} 
+                    setToggle={setToggle} 
+                    title={edge.node.frontmatter.title}
+                    name={edge.node.frontmatter.name}
+                    image={edge.node.frontmatter.featuredImage.childImageSharp.fluid}
+                    details={edge.node.frontmatter.details}
+                    html={{__html: edge.node.html}}
+                    />
+                ))}
+            </ul>
         </section>
     )
 }
