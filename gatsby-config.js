@@ -12,13 +12,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-fontawesome-css',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'src',
-        path: `${__dirname}/src/`
-      }
-    },
     'gatsby-plugin-sharp',
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
