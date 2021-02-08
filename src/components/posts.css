@@ -61,11 +61,11 @@
 
 /* article cover buttons */
 .post:nth-child(1) button, .post:nth-child(3) button, .post:nth-child(5) button, .post:nth-child(7) button, .post:nth-child(9) button, .post:nth-child(11) button{
-    border: solid 1px var(--article1);
+    border: solid 1px transparent;
     border-radius: 50px;
 }
 .post:nth-child(2) button, .post:nth-child(4) button, .post:nth-child(6) button, .post:nth-child(8) button, .post:nth-child(10) button{
-    border: solid 1px var(--article2);
+    border: solid 1px transparent;
     border-radius: 50px;
 }
 

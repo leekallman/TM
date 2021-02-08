@@ -12,6 +12,9 @@
     animation: fadeOut 4s ease-in-out forwards;
     background-color: #fff;
 }
+.home{
+    position: relative;
+}
 
 .mainLogo{
     width: 100vw;
@@ -89,7 +92,7 @@
     }
 
     .mainLogo{
-        margin-top:5vh;
+        margin-top:4vh;
     }
     .about{
         margin-left:6vw;
