@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 import './posts.css';
-// import Close from '../components/Close';
+import Close from '../components/Close';
 
 
 const Posts = () => {
@@ -57,7 +57,7 @@ const Posts = () => {
                     <Img className="postImg" fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} /> 
 
                     <div className={toggle ? 'hide' : 'postCopy'} >
-                        {/* <Close close={toggler} /> */}
+                        <Close close={toggler} />
                         <h3>{edge.node.frontmatter.details}</h3>
                         <div className="copy" dangerouslySetInnerHTML= {{__html: edge.node.html}}></div>
                         <h4>Read the full article in Issue One</h4>
