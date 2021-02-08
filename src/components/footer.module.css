@@ -119,6 +119,9 @@
     .footer h1{
         margin: 0 auto;
     }
+    .spinner {
+        margin: 0 auto;
+    }
 
     .about{
         margin: 0.5rem 2rem 0 2rem;
@@ -138,6 +141,7 @@
 
 @media only screen and (max-width: 450px) {
     .footer {
+        height: 120vh;
         scroll-snap-align: none;
     }
     .footer h1, .footer h2{
