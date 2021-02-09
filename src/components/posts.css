@@ -128,7 +128,7 @@ button img{
     border:none;
 }
 
-.post button:hover{
+.postDescrip .readMoreBtn:hover{
     border: solid 1px var(--black);
 }
 
@@ -146,6 +146,7 @@ a{
         display:grid;
         grid-template-columns: 1;
         width:100vw;
+        height: 90vh;
     }
     .postDescrip{
         width:100vw;
@@ -155,7 +156,7 @@ a{
 
     .postImg{ 
         grid-row:1;
-        height:100vh;
+        height:90vh;
         width: 100vw;
         z-index: 3;
         opacity:0.8;
@@ -163,9 +164,10 @@ a{
     }
 
     .postCopy{
-        top: -100%;
+        top: -100vh;
         left: 0;
         width: 100vw;
+        height: 90vh;
         font-size: 24px;
         padding:4rem 6rem;
         position: relative;
@@ -189,6 +191,7 @@ a{
         left: 0;
         width: 100vw;
         z-index: 0;
+        height: 90vh;
      }
 
    
@@ -245,16 +248,13 @@ a{
 }
 
 @media only screen and (max-width: 485px) {
-/* .post {
-    scroll-snap-align: none;
-} */
+
 :root {
     --lh: 1rem;
   }
     .postCopy{
         padding:1rem 2rem;
         font-size: 13px;
-        min-height: 100vh;
         line-height: var(--lh);
     }
 
@@ -272,7 +272,7 @@ a{
         max-width: 15px;
     }
 }
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 370px) {
 .copy{
     --max-lines: 18;
     position: relative;

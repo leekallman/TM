@@ -91,8 +91,11 @@ canvas{
         letter-spacing: 0px;
     }
 }
-/* @media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1200px) {
 html {
     scroll-snap-type: y proximity;
 }
-} */
+section{
+    scroll-snap-align: none;
+}
+}
