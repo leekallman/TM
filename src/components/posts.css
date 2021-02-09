@@ -146,19 +146,19 @@ a{
         display:grid;
         grid-template-columns: 1;
         width:100vw;
-        /* height: 90vh; */
         scroll-snap-align: none;
     }
     .postDescrip{
         width:100vw;
         grid-row:1;
         grid-column:1;
-        /* height:90vh; */
+    }
+    .postDescrip .readMoreBtn:hover{
+        border: solid 1px transparent;
     }
 
     .postImg{ 
         grid-row:1;
-        /* height:90vh; */
         width: 100vw;
         z-index: 3;
         opacity:0.8;
@@ -169,7 +169,6 @@ a{
         top: -100vh;
         left: 0;
         width: 100vw;
-        /* height: 90vh; */
         font-size: 24px;
         padding:4rem 6rem;
         position: relative;
@@ -192,7 +191,7 @@ a{
         left: 0;
         width: 100vw;
         z-index: 0;
-        /* height: 90vh; */
+        padding:4rem 6rem;
      }
 
    
@@ -236,7 +235,7 @@ a{
 
 }
 @media only screen and (max-width: 600px) {
-    .postCopy{
+    .postCopy, .hide{
         font-size: 16px;
     }
     .postCopy h3{
@@ -250,13 +249,9 @@ a{
 
 @media only screen and (max-width: 485px) {
 
-:root {
-    --lh: 1rem;
-  }
-    .postCopy{
-        padding:1rem 2rem;
-        font-size: 13px;
-        line-height: var(--lh);
+    .postCopy, .hide{
+        padding:2rem;
+        font-size: 14px;
     }
 
    
@@ -274,6 +269,16 @@ a{
     }
 }
 @media only screen and (max-width: 370px) {
+    :root {
+        --lh: 1rem;
+      }
+    .postCopy, .hide{
+        padding:2rem;
+        font-size: 13px;
+        line-height: var(--lh);
+    }
+
+
 .copy{
     --max-lines: 18;
     position: relative;
