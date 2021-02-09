@@ -140,9 +140,7 @@
 
 @media only screen and (max-width: 450px) {
     .footer {
-        height: 130vh;
-
-        scroll-snap-align: none;
+        height: 120vh;
     }
     .footer h1, .footer h2{
         font-size:24px;
@@ -156,7 +154,12 @@
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 374px) {
+    .footer {
+        height: 150vh;
+    }
+}
+@media only screen and (max-width: 324px) {
     .footer {
         height: 180vh;
     }

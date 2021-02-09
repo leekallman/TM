@@ -60,11 +60,11 @@
 }
 
 /* article cover buttons */
-.post:nth-child(1) button, .post:nth-child(3) button, .post:nth-child(5) button, .post:nth-child(7) button, .post:nth-child(9) button, .post:nth-child(11) button{
+.post:nth-child(1) .readMoreBtn, .post:nth-child(3) .readMoreBtn, .post:nth-child(5) .readMoreBtn, .post:nth-child(7) .readMoreBtn, .post:nth-child(9) .readMoreBtn, .post:nth-child(11) .readMoreBtn{
     border: solid 1px transparent;
     border-radius: 50px;
 }
-.post:nth-child(2) button, .post:nth-child(4) button, .post:nth-child(6) button, .post:nth-child(8) button, .post:nth-child(10) button{
+.post:nth-child(2) .readMoreBtn, .post:nth-child(4) .readMoreBtn, .post:nth-child(6) .readMoreBtn, .post:nth-child(8) .readMoreBtn, .post:nth-child(10) .readMoreBtn{
     border: solid 1px transparent;
     border-radius: 50px;
 }
@@ -96,7 +96,7 @@
     height:100vh;
     width: 50vw;
     z-index: 9999;
-    padding: 4rem 6rem;
+    padding: 3rem 5rem;
     opacity:0;
     transition: opacity 0.3s ease-in-out;
  }
@@ -136,29 +136,15 @@ a{
     cursor: pointer;
 }
 
-
-
-
-
 @media only screen and (min-width: 1200px) {
     .closeBtn{
-        display:none;
+        display: none;
     }
 }
-@media only screen and (max-width: 450px) {
-    button img{
-        max-width: 15px;
-    }
-}
-
-
-
-
 @media only screen and (max-width: 1200px) {
     .post{
         display:grid;
         grid-template-columns: 1;
-        /* flex-direction: column; */
         width:100vw;
     }
     .postDescrip{
@@ -172,7 +158,7 @@ a{
         height:100vh;
         width: 100vw;
         z-index: 3;
-        opacity:0.7;
+        opacity:0.8;
         grid-column:1;
     }
 
@@ -183,6 +169,7 @@ a{
         font-size: 24px;
         padding:4rem 6rem;
         position: relative;
+        scroll-snap-align: start;
     }
     .postCopy h3{
         max-width: 60vw;
@@ -221,7 +208,6 @@ a{
         max-width: 60vw;
     }
 
-
 }
 
 @media only screen and (max-width: 1000px) {
@@ -250,7 +236,7 @@ a{
         font-size: 16px;
     }
     .postCopy h3{
-        max-width: 70vw;
+        max-width: 80vw;
     }
     .postDescrip h2{
         font-size: 32px;
@@ -259,15 +245,19 @@ a{
 }
 
 @media only screen and (max-width: 485px) {
-.post {
+/* .post {
     scroll-snap-align: none;
-}
-
+} */
+:root {
+    --lh: 1rem;
+  }
     .postCopy{
         padding:1rem 2rem;
         font-size: 13px;
         min-height: 100vh;
+        line-height: var(--lh);
     }
+
    
     .postCopy h3{
         max-width: 80vw;
@@ -275,8 +265,25 @@ a{
         margin: 1rem auto;
     }
 
-
     .postCopy h4{
         bottom:1vh;
     }
+    button img{
+        max-width: 15px;
+    }
+}
+@media only screen and (max-width: 374px) {
+.copy{
+    --max-lines: 18;
+    position: relative;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+}
+
+.copy::before {
+    position: absolute;
+    content: "...";
+    bottom: 0;
+    right: 0;
+  }
 }
