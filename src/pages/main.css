@@ -92,10 +92,11 @@ canvas{
     }
 }
 @media only screen and (max-width: 1200px) {
-html {
-    scroll-snap-type: y proximity;
-}
-section{
-    scroll-snap-align: none;
-}
+    html, body{
+        scroll-snap-type: none;
+    }
+    
+    section{
+        scroll-snap-align: none;
+    }
 }
