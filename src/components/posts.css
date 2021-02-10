@@ -130,6 +130,7 @@ button img{
 
 .postDescrip .readMoreBtn:hover{
     border: solid 1px var(--black);
+    cursor: pointer;
 }
 
 a{
