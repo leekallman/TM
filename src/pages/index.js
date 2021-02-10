@@ -29,6 +29,7 @@ import useSiteMetadata from '../components/use-siteMetadata'
             <meta property="og:locale" content="en_US" />
             <meta property="og:url" content={url} />
             <link rel="canonical" href={url}/>
+            <link rel="shortcut icon" href="../../static/favicon.ico"></link>
           </Helmet>
           <section className="home"> 
             <Hero />
