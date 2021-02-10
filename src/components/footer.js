@@ -49,10 +49,3 @@ const Footer = () => {
     
     
     export default Footer;
-
-
-
-    dns1.p08.nsone.net
-dns2.p08.nsone.net
-dns3.p08.nsone.net
-dns4.p08.nsone.net
