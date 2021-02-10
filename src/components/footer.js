@@ -6,7 +6,7 @@ import IssueOne from '../components/IssueOne';
 const Footer = () => {
     return(
         <footer className={footerStyles.footer} id="footer">
-            <a href="#top" className={footerStyles.logo}><h1><span>Tort</span> Magazine
+            <a href="/" className={footerStyles.logo}><h1><span>Tort</span> Magazine
             </h1></a>
             <div className={footerStyles.spinner}> 
                 <IssueOne className={footerStyles.issue}/>
@@ -20,7 +20,7 @@ const Footer = () => {
 
             <div className={footerStyles.column1}>
                 <p>
-                    Editorial: Liz Olofsson, Lisa Lee, Marta Casagrande, Tor Westerlund<br/><br/>
+                    Editorial team: Liz Olofsson, Lisa Lee, Marta Casagrande, Tor Westerlund<br/><br/>
                     Contributors: Ashik Zaman, Riin Raanu, Maja Winberg, Thulani Gushman, Clarice Goulart, William Harvey Howe, Emilia Stålhammar
                     <br/><br/>
                     112 pp, 16 × 22 cm, softcover: 300g Lynx Rough, 2021.<br/>
@@ -49,3 +49,10 @@ const Footer = () => {
     
     
     export default Footer;
+
+
+
+    dns1.p08.nsone.net
+dns2.p08.nsone.net
+dns3.p08.nsone.net
+dns4.p08.nsone.net
