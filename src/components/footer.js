@@ -23,7 +23,7 @@ const Footer = () => {
                     Editorial: Liz Olofsson, Lisa Lee, Marta Casagrande, Tor Westerlund<br/><br/>
                     Contributors: Ashik Zaman, Riin Raanu, Maja Winberg, Thulani Gushman, Clarice Goulart, William Harvey Howe, Emilia Stålhammar
                     <br/><br/>
-                    112 pp, 16 × 22 cm, softcover: Munken Lynx 240g, 2021.<br/>
+                    112 pp, 16 × 22 cm, softcover: 300g Lynx Rough, 2021.<br/>
                     Binding: Sewed glue binding<br/>
                     ISBN 2003-8003<br/>
                     100SEK

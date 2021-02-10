@@ -26,7 +26,7 @@ const Post = ({title, name, id, image, details, html}) => {
                 </button>
             </div>
         
-            <Img className="postImg" fluid={image} />
+            <Img className="postImg" fluid={image} alt="article image"/>
             <div id={'hide' + id} className={toggle ? 'hide' : 'postCopy'} >
                 <button aria-label="Close" onClick={selectPost} className="closeBtn">
                     <img alt="close-button" src={cancel}/>

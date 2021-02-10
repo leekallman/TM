@@ -11,7 +11,7 @@ return (
         <React.Fragment>
             <Loading />
             <div className={heroStyles.hero}>
-                <img src={gif} alt="flip through magazine pages" className={heroStyles.gif} width="500px" />
+                <img src={gif} alt="flip through magazine gif" className={heroStyles.gif} width="500px" />
                 <a className={heroStyles.purchase} href="/#footer"><h2>Available soon</h2></a>
             </div>
     </React.Fragment>
