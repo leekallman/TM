@@ -33,7 +33,7 @@ const Footer = () => {
 
             <div className={footerStyles.column2}>
                 <div className={footerStyles.buy}>
-                        <a href="https://www.shop.tortmagazine.com">
+                        <a href="https://shop.tortmagazine.com">
                             <h2>Buy now</h2>
                         </a>
                 </div>
