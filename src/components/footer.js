@@ -32,11 +32,11 @@ const Footer = () => {
             </div>
 
             <div className={footerStyles.column2}>
-                {/* <div className={footerStyles.buy}>
+                <div className={footerStyles.buy}>
                         <a href="https://www.shop.tortmagazine.com">
                             <h2>Buy now</h2>
                         </a>
-                </div> */}
+                </div>
                 <ul>
                 <li><a href="mailto:contact@tortmagazine.com">contact@tortmagazine.com</a></li>
                 <li><a href="https://instagram.com/tort_magazine" target="_blank" rel="noreferrer">instagram</a></li>
