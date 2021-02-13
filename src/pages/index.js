@@ -3,6 +3,7 @@ import './main.css';
 import Hero from '../components/hero.js';
 import Posts from '../components/posts.js';
 import Footer from '../components/footer';
+import Favicon from '../images/favicon.ico';
 import {Helmet} from 'react-helmet';
 import useSiteMetadata from '../components/use-siteMetadata'
 
@@ -28,7 +29,7 @@ import useSiteMetadata from '../components/use-siteMetadata'
             <meta property="og:locale" content="en_US" />
             <meta property="og:url" content={url} />
             <link rel="canonical" href={url}/>
-            <link rel="shortcut icon" href="../../images/favicon.ico"></link>
+            <link rel="shortcut icon" href={Favicon}></link>
           </Helmet>
           <section className="home"> 
             <Hero />
