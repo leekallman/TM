@@ -173,7 +173,7 @@
         font-size: 72px;
         border-radius: 70px;
     }
-    footer p{
+    footer p, .footer ul{
         font-size: 24px;
     }
 }
