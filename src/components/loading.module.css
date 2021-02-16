@@ -26,6 +26,7 @@
     letter-spacing: -1px;
     font-size: 36px;
 }
+
 .mainLogo span{
     font-style: italic;
 }
@@ -76,6 +77,16 @@
     align-items: center;
     letter-spacing: -1px;
     margin-left:3vw;
+}
+
+@media only screen and (min-width: 1461px) {
+    h2{
+        font-size:72px; 
+    }
+
+    .logo, .mainLogo, .about{
+        font-size: 54px;
+    }
 }
 
 

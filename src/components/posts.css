@@ -137,11 +137,34 @@ a{
     cursor: pointer;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1461px) {
     .closeBtn{
         display: none;
     }
+    .post:nth-child(1) .readMoreBtn, .post:nth-child(3) .readMoreBtn, .post:nth-child(5) .readMoreBtn, .post:nth-child(7) .readMoreBtn, .post:nth-child(9) .readMoreBtn, .post:nth-child(11) .readMoreBtn{
+        border-radius: 70px;
+    }
+    .post:nth-child(2) .readMoreBtn, .post:nth-child(4) .readMoreBtn, .post:nth-child(6) .readMoreBtn, .post:nth-child(8) .readMoreBtn, .post:nth-child(10) .readMoreBtn{
+        border-radius: 70px;
+    }
+    button {
+        padding: 20px 70px;
+    }
 }
+@media only screen and (min-width: 1800px) {
+    .postCopy h3{
+        font-size:30px;
+        margin-bottom: 4vh;
+    }
+    .copy p{
+        font-size:24px;
+    }
+    .postCopy h4{
+        font-size:30px;
+    }
+}
+
+
 @media only screen and (max-width: 1200px) {
     .post{
         display:grid;

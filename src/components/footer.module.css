@@ -75,8 +75,7 @@
 }
 
 
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1460px) {
     .footer p, .footer li{
         font-size: 18px;
     }
@@ -165,3 +164,16 @@
     }
 }
 
+@media only screen and (min-width: 1461px) {
+    .footer h1{
+        font-size: 72px;
+        margin:4vh auto;
+    }
+    .footer h2{
+        font-size: 72px;
+        border-radius: 70px;
+    }
+    footer p{
+        font-size: 24px;
+    }
+}
