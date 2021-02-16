@@ -9,7 +9,7 @@
     letter-spacing: -2px;
     position: fixed;
     z-index: 10;
-    /* animation: fadeOut 4s ease-in-out forwards; */
+    animation: fadeOut 4s ease-in-out forwards;
     background-color: #fff;
 }
 .home{
