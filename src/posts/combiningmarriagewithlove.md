@@ -3,7 +3,7 @@ id: "5"
 title: "Combining Marriage with Love"
 name: "Surbhi"
 date: "2020-01-01"
-details: INTERVIEW and PHOTOGRAPHY by Riin Raanu
+details: INTERVIEW and PHOTOGRAPHY by Riin Rannu
 featuredImage: "../images/surbhi.jpeg"
 ---
 
