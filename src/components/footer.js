@@ -30,7 +30,7 @@ const Footer = () => {
                     <br/><br/>
                     Stockists: <a href="https://papercutshop.se/">Papercut</a>, Krukmakargatan 24 Stockholm
                     <br/>
-                    Konst-ig, Skånegatan 71, Stockholm
+                    Konst-ig, Skånegatan 71 Stockholm
                 </p>
             </div>
 
