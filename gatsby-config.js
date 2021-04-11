@@ -1,3 +1,12 @@
+// require('dotenv').config({
+//   path: `.env`,
+// })
+
+const dotenv = require('dotenv')
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config()
+}
+
 module.exports = {
   siteMetadata: {
     title: `Tort Magazine`,
@@ -17,6 +26,12 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 }
- 
