@@ -7,7 +7,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-sharp',
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
@@ -17,6 +16,12 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `lknoe36ir5hh`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      }
+    },
   ],
 }
- 

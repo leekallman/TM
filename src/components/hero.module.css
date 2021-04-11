@@ -5,7 +5,6 @@
     flex-direction: column;
     text-align: center;
     scroll-snap-align: start;
-    /* background-color:var(--hero); */
     background-image: url(../images/helicopter.jpg);
     background-size: 25%;
     background-position: center;
