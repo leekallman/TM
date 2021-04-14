@@ -1,5 +1,5 @@
 import React from 'react';
-import heroStyles from './hero.module.css';
+import * as heroStyles from './hero.module.css';
 import Loading from "../components/loading.js";
 import gif from '../images/tort-gif.gif';
 
