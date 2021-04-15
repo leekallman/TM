@@ -28,17 +28,6 @@ const Post = ({ node }) => {
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
             [BLOCKS.HEADING_2]: (node, children) => <Heading2>{children}</Heading2>,
-            [BLOCKS.EMBEDDED_ASSET]: (node) => {
-
-                return (
-                    <>
-                        <h2>Embedded Asset</h2>
-                        <pre>
-                            <code>{JSON.stringify(node, null, 2)}</code>
-                        </pre>
-                    </>
-                )
-            },
         },
     }
     return (
@@ -46,7 +35,7 @@ const Post = ({ node }) => {
             <div className="postDescrip">
                 <h2 className="postTitle">{node.title}</h2>
                 <h2 className="name">{node.name}</h2>
-                <button className="readMoreBtn" onClick={selectPost}>{toggle ? <h2 id={node.index} className="readMore">Read more</h2> : <h2 index={node.id} className="readMore">Read less</h2>}
+                <button className="readMoreBtn" onClick={selectPost}>{toggle ? <h2 id={node.index} className="readMore">Read more</h2> : <h2 index={node.index} className="readMore">Read less</h2>}
                 </button>
             </div>
 

@@ -46,9 +46,9 @@ p {
 .post:nth-child(1) .postCopy button,
 .post:nth-child(3) .postCopy button,
 .post:nth-child(5) .postCopy button,
-.pos:nth-child(7) .postCopy button,
-.pos:nth-child(9) .postCopy button,
-.pos:nth-child(11) .postCopy button {
+.post:nth-child(7) .postCopy button,
+.post:nth-child(9) .postCopy button,
+.post:nth-child(11) .postCopy button {
   border: none;
 }
 .post:nth-child(2) .postCopy button,
@@ -77,9 +77,9 @@ p {
 .post:nth-child(1) .hide button,
 .post:nth-child(3) .hide button,
 .post:nth-child(5) .hide button,
-.pos:nth-child(7) .hide button,
-.pos:nth-child(9) .hide button,
-.pos:nth-child(11) .hide button {
+.post:nth-child(7) .hide button,
+.post:nth-child(9) .hide button,
+.post:nth-child(11) .hide button {
   border: none;
 }
 .post:nth-child(2) .hide button,
@@ -101,7 +101,7 @@ p {
 }
 .post:nth-child(2),
 .post:nth-child(4),
-.post:nth-child(8),
+.post:nth-child(6),
 .post:nth-child(8),
 .post:nth-child(10) {
   background-color: var(--article2);

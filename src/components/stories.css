@@ -1,0 +1,615 @@
+.stories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.story {
+  height: 100vh;
+  grid-column: 1 /3;
+  /* position: relative; */
+  text-align: center;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.storyInner {
+  position: relative;
+  display: flex;
+  height: 100vh;
+}
+
+.story p {
+  text-align: left;
+}
+.storyDescrip,
+.storyImg {
+  width: 50vw;
+}
+
+.storyDescrip {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+/* story intro */
+.story:nth-child(1) .storyCopy,
+.story:nth-child(3) .storyCopy,
+.story:nth-child(5) .storyCopy,
+.story:nth-child(7) .storyCopy,
+.story:nth-child(9) .storyCopy,
+.story:nth-child(11) .storyCopy,
+.story:nth-child(13) .storyCopy,
+.story:nth-child(15) .storyCopy,
+.story:nth-child(17) .storyCopy,
+.story:nth-child(19) .storyCopy,
+.story:nth-child(21) .storyCopy,
+.story:nth-child(23) .storyCopy,
+.story:nth-child(25) .storyCopy,
+.story:nth-child(27) .storyCopy,
+.story:nth-child(29) .storyCopy,
+.story:nth-child(31) .storyCopy,
+.story:nth-child(33) .storyCopy {
+  background-color: var(--purple);
+}
+.story:nth-child(2) .storyCopy,
+.story:nth-child(4) .storyCopy,
+.story:nth-child(6) .storyCopy,
+.story:nth-child(8) .storyCopy,
+.story:nth-child(10) .storyCopy,
+.story:nth-child(12) .storyCopy,
+.story:nth-child(14) .storyCopy,
+.story:nth-child(16) .storyCopy,
+.story:nth-child(18) .storyCopy,
+.story:nth-child(20) .storyCopy,
+.story:nth-child(22) .storyCopy,
+.story:nth-child(24) .storyCopy,
+.story:nth-child(26) .storyCopy,
+.story:nth-child(28) .storyCopy,
+.story:nth-child(30) .storyCopy,
+.story:nth-child(32) .storyCopy,
+.story:nth-child(34) .storyCopy {
+  background-color: var(--mint);
+}
+
+/* story copy close buttons */
+.story:nth-child(1) .storyCopy button,
+.story:nth-child(3) .storyCopy button,
+.story:nth-child(5) .storyCopy button,
+.story:nth-child(7) .storyCopy button,
+.story:nth-child(9) .storyCopy button,
+.story:nth-child(11) .storyCopy button,
+.story:nth-child(13) .storyCopy button,
+.story:nth-child(15) .storyCopy button,
+.story:nth-child(17) .storyCopy button,
+.story:nth-child(19) .storyCopy button,
+.story:nth-child(21) .storyCopy button,
+.story:nth-child(23) .storyCopy button,
+.story:nth-child(25) .storyCopy button,
+.story:nth-child(27) .storyCopy button,
+.story:nth-child(29) .storyCopy button,
+.story:nth-child(31) .storyCopy button,
+.story:nth-child(33) .storyCopy button {
+  border: none;
+}
+.story:nth-child(2) .storyCopy button,
+.story:nth-child(4) .storyCopy button,
+.story:nth-child(6) .storyCopy button,
+.story:nth-child(8) .storyCopy button,
+.story:nth-child(10) .storyCopy button,
+.story:nth-child(12) .storyCopy button,
+.story:nth-child(14) .storyCopy button,
+.story:nth-child(16) .storyCopy button,
+.story:nth-child(18) .storyCopy button,
+.story:nth-child(20) .storyCopy button,
+.story:nth-child(22) .storyCopy button,
+.story:nth-child(24) .storyCopy button,
+.story:nth-child(26) .storyCopy button,
+.story:nth-child(28) .storyCopy button,
+.story:nth-child(30) .storyCopy button,
+.story:nth-child(32) .storyCopy button {
+  border: none;
+}
+.story:nth-child(1) .storyCopy button:hover,
+.story:nth-child(3) .storyCopy button:hover,
+.story:nth-child(5) .storyCopy button:hover,
+.story:nth-child(7) .storyCopy button:hover,
+.story:nth-child(9) .storyCopy button:hover,
+.story:nth-child(11) .storyCopy button:hover,
+.story:nth-child(13) .storyCopy button:hover,
+.story:nth-child(15) .storyCopy button:hover,
+.story:nth-child(17) .storyCopy button:hover,
+.story:nth-child(19) .storyCopy button:hover,
+.story:nth-child(21) .storyCopy button:hover,
+.story:nth-child(23) .storyCopy button:hover,
+.story:nth-child(25) .storyCopy button:hover,
+.story:nth-child(27) .storyCopy button:hover,
+.story:nth-child(29) .storyCopy button:hover,
+.story:nth-child(31) .storyCopy button:hover,
+.story:nth-child(33) .storyCopy button:hover {
+  border: none;
+}
+.story:nth-child(2) .storyCopy button:hover,
+.story:nth-child(4) .storyCopy button:hover,
+.story:nth-child(6) .storyCopy button:hover,
+.story:nth-child(8) .storyCopy button:hover,
+.story:nth-child(10) .storyCopy button:hover,
+.story:nth-child(12) .storyCopy button:hover,
+.story:nth-child(14) .storyCopy button:hover,
+.story:nth-child(16) .storyCopy button:hover,
+.story:nth-child(18) .storyCopy button:hover,
+.story:nth-child(20) .storyCopy button:hover,
+.story:nth-child(22) .storyCopy button:hover,
+.story:nth-child(24) .storyCopy button:hover,
+.story:nth-child(26) .storyCopy button:hover,
+.story:nth-child(28) .storyCopy button:hover,
+.story:nth-child(30) .storyCopy button:hover,
+.story:nth-child(32) .storyCopy button:hover,
+.story:nth-child(34) .storyCopy button:hover {
+  border: none;
+}
+
+.story:nth-child(1) .hide button,
+.story:nth-child(3) .hide button,
+.story:nth-child(5) .hide button,
+.story:nth-child(7) .hide button,
+.story:nth-child(9) .hide button,
+.story:nth-child(11) .hide button,
+.story:nth-child(13) .hide button,
+.story:nth-child(15) .hide button,
+.story:nth-child(17) .hide button,
+.story:nth-child(19) .hide button,
+.story:nth-child(21) .hide button,
+.story:nth-child(23) .hide button,
+.story:nth-child(25) .hide button,
+.story:nth-child(27) .hide button,
+.story:nth-child(29) .hide button,
+.story:nth-child(31) .hide button,
+.story:nth-child(33) .hide button {
+  border: none;
+}
+.story:nth-child(2) .hide button,
+.story:nth-child(4) .hide button,
+.story:nth-child(6) .hide button,
+.story:nth-child(8) .hide button,
+.story:nth-child(10) .hide button,
+.story:nth-child(12) .hide button,
+.story:nth-child(14) .hide button,
+.story:nth-child(16) .hide button,
+.story:nth-child(18) .hide button,
+.story:nth-child(20) .hide button,
+.story:nth-child(22) .hide button,
+.story:nth-child(24) .hide button,
+.story:nth-child(26) .hide button,
+.story:nth-child(28) .hide button,
+.story:nth-child(30) .hide button,
+.story:nth-child(32) .hide button,
+.story:nth-child(34) .hide button {
+  border: none;
+}
+
+/* story cover */
+.story:nth-child(1),
+.story:nth-child(3),
+.story:nth-child(5),
+.story:nth-child(7),
+.story:nth-child(9),
+.story:nth-child(11),
+.story:nth-child(13),
+.story:nth-child(15),
+.story:nth-child(17),
+.story:nth-child(19),
+.story:nth-child(21),
+.story:nth-child(23),
+.story:nth-child(25),
+.story:nth-child(27),
+.story:nth-child(29),
+.story:nth-child(31),
+.story:nth-child(33) {
+  background-color: var(--purple);
+}
+.story:nth-child(2),
+.story:nth-child(4),
+.story:nth-child(8),
+.story:nth-child(8),
+.story:nth-child(10),
+.story:nth-child(12),
+.story:nth-child(14),
+.story:nth-child(16),
+.story:nth-child(18),
+.story:nth-child(20),
+.story:nth-child(22),
+.story:nth-child(24),
+.story:nth-child(26),
+.story:nth-child(28),
+.story:nth-child(30),
+.story:nth-child(32),
+.story:nth-child(34) {
+  background-color: var(--mint);
+}
+
+/* story cover buttons */
+.story:nth-child(1) .readMoreBtn,
+.story:nth-child(3) .readMoreBtn,
+.story:nth-child(5) .readMoreBtn,
+.story:nth-child(7) .readMoreBtn,
+.story:nth-child(9) .readMoreBtn,
+.story:nth-child(11) .readMoreBtn,
+.story:nth-child(13) .readMoreBtn,
+.story:nth-child(15) .readMoreBtn,
+.story:nth-child(17) .readMoreBtn,
+.story:nth-child(19) .readMoreBtn,
+.story:nth-child(21) .readMoreBtn,
+.story:nth-child(23) .readMoreBtn,
+.story:nth-child(25) .readMoreBtn,
+.story:nth-child(27) .readMoreBtn,
+.story:nth-child(29) .readMoreBtn,
+.story:nth-child(31) .readMoreBtn,
+.story:nth-child(33) .readMoreBtn {
+  border: solid 1px transparent;
+  border-radius: 50px;
+}
+.story:nth-child(2) .readMoreBtn,
+.story:nth-child(4) .readMoreBtn,
+.story:nth-child(6) .readMoreBtn,
+.story:nth-child(8) .readMoreBtn,
+.story:nth-child(10) .readMoreBtn,
+.story:nth-child(12) .readMoreBtn,
+.story:nth-child(14) .readMoreBtn,
+.story:nth-child(16) .readMoreBtn,
+.story:nth-child(18) .readMoreBtn,
+.story:nth-child(20) .readMoreBtn,
+.story:nth-child(22) .readMoreBtn,
+.story:nth-child(24) .readMoreBtn,
+.story:nth-child(26) .readMoreBtn,
+.story:nth-child(28) .readMoreBtn,
+.story:nth-child(30) .readMoreBtn,
+.story:nth-child(32) .readMoreBtn,
+.story:nth-child(34) .readMoreBtn {
+  border: solid 1px transparent;
+  border-radius: 50px;
+}
+
+/* cover */
+.storyDescrip h2 {
+  margin: auto;
+}
+
+/* modal */
+.storyCopy {
+  position: absolute;
+  top: 0;
+  left: 50vw;
+  height: 100vh;
+  z-index: 9999;
+  column-width: 30vw;
+  column-gap: 5vw;
+  padding: 10vh 5vw;
+  transition: opacity 0.5s ease-in-out;
+}
+/* .storyCopyInner {
+  height: 100vh;
+} */
+h3,
+.storyCopy > p {
+}
+
+.copy {
+  text-align: left;
+}
+
+.gutter {
+  position: fixed;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 100000;
+}
+.leftGutter {
+  width: 50%;
+  height: 100%;
+  box-shadow: 0px 0 20px 0 rgba(0, 0, 0, 0.7);
+}
+
+.rightGutter {
+  width: 50%;
+  height: 100%;
+  box-shadow: 0px 0 20px 0 rgba(0, 0, 0, 0.7);
+}
+
+.hide {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: calc(100vw - 5px);
+  z-index: 9999;
+  padding: 3rem 5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.storyCopy h4,
+.hide h4 {
+  position: absolute;
+  bottom: 2rem;
+  left: 30%;
+}
+
+button {
+  margin: auto;
+  padding: 10px 50px;
+  display: inline-block;
+  font-family: Spectral;
+  background: none;
+  outline: none;
+}
+
+button img {
+  max-width: 20px;
+}
+
+.closeBtn {
+  margin: auto;
+  background: none;
+  padding: 0;
+  /* float: right; */
+  border: none;
+}
+
+.storyDescrip .readMoreBtn:hover {
+  border: solid 1px var(--black);
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1461px) {
+  .closeBtn {
+    display: none;
+  }
+  .story:nth-child(1) .readMoreBtn,
+  .story:nth-child(3) .readMoreBtn,
+  .story:nth-child(5) .readMoreBtn,
+  .story:nth-child(7) .readMoreBtn,
+  .story:nth-child(9) .readMoreBtn,
+  .story:nth-child(11) .readMoreBtn,
+  .story:nth-child(13) .readMoreBtn,
+  .story:nth-child(15) .readMoreBtn,
+  .story:nth-child(17) .readMoreBtn,
+  .story:nth-child(19) .readMoreBtn,
+  .story:nth-child(21) .readMoreBtn,
+  .story:nth-child(23) .readMoreBtn,
+  .story:nth-child(25) .readMoreBtn,
+  .story:nth-child(27) .readMoreBtn,
+  .story:nth-child(29) .readMoreBtn,
+  .story:nth-child(31) .readMoreBtn,
+  .story:nth-child(33) .readMoreBtn {
+    border-radius: 70px;
+  }
+  .story:nth-child(2) .readMoreBtn,
+  .story:nth-child(4) .readMoreBtn,
+  .story:nth-child(6) .readMoreBtn,
+  .story:nth-child(8) .readMoreBtn,
+  .story:nth-child(10) .readMoreBtn,
+  .story:nth-child(12) .readMoreBtn,
+  .story:nth-child(14) .readMoreBtn,
+  .story:nth-child(16) .readMoreBtn,
+  .story:nth-child(18) .readMoreBtn,
+  .story:nth-child(20) .readMoreBtn,
+  .story:nth-child(22) .readMoreBtn,
+  .story:nth-child(24) .readMoreBtn,
+  .story:nth-child(26) .readMoreBtn,
+  .story:nth-child(28) .readMoreBtn,
+  .story:nth-child(30) .readMoreBtn,
+  .story:nth-child(32) .readMoreBtn,
+  .story:nth-child(34) .readMoreBtn {
+    border-radius: 70px;
+  }
+  button {
+    padding: 20px 70px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .storyCopy h3 {
+    font-size: 30px;
+    margin-bottom: 4vh;
+  }
+  .copy p {
+    font-size: 24px;
+  }
+  .storyCopy h4 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .story {
+    display: grid;
+    grid-template-columns: 1;
+    width: 100vw;
+    scroll-snap-align: none;
+  }
+  .storyDescrip {
+    width: 100vw;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .storyDescrip .readMoreBtn:hover {
+    border: solid 1px transparent;
+  }
+
+  .storyImg {
+    grid-row: 1;
+    width: 100vw;
+    z-index: 3;
+    opacity: 0.8;
+    grid-column: 1;
+  }
+
+  .storyCopy {
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    font-size: 24px;
+    padding: 4rem 6rem;
+    position: relative;
+  }
+  .storyCopy h3 {
+    max-width: 60vw;
+    font-size: 24px;
+    margin: 1vh auto 4vh auto;
+  }
+
+  .storyCopy h4 {
+    position: absolute;
+    bottom: 3vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  .hide {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 0;
+    padding: 4rem 6rem;
+  }
+
+  .storyDescrip h2,
+  button,
+  .storyDescrip button {
+    z-index: 5;
+  }
+
+  /* story cover buttons */
+  .story:nth-child(1) button,
+  .story:nth-child(3) button,
+  .story:nth-child(5) button,
+  .story:nth-child(7) button,
+  .story:nth-child(9) button,
+  .story:nth-child(11) button,
+  .story:nth-child(13) button,
+  .story:nth-child(15) button,
+  .story:nth-child(17) button,
+  .story:nth-child(19) button,
+  .story:nth-child(21) button,
+  .story:nth-child(23) button,
+  .story:nth-child(25) button,
+  .story:nth-child(27) button,
+  .story:nth-child(29) button,
+  .story:nth-child(31) button,
+  .story:nth-child(33) button {
+    border: none;
+  }
+
+  .story:nth-child(2) button,
+  .story:nth-child(4) button,
+  .story:nth-child(6) button,
+  .story:nth-child(8) button,
+  .story:nth-child(10) button,
+  .story:nth-child(12) button,
+  .story:nth-child(14) button,
+  .story:nth-child(16) button,
+  .story:nth-child(18) button,
+  .story:nth-child(20) button,
+  .story:nth-child(22) button,
+  .story:nth-child(24) button,
+  .story:nth-child(26) button,
+  .story:nth-child(28) button,
+  .story:nth-child(30) button,
+  .story:nth-child(32) button,
+  .story:nth-child(34) button {
+    border: none;
+  }
+  .storyDescrip h2 {
+    max-width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .storyCopy,
+  .hide {
+    padding: 2rem 4rem;
+  }
+  .storyCopy h3 {
+    margin: 1rem auto 2rem auto;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .storyCopy {
+    font-size: 18px;
+    padding: 1rem 3rem;
+  }
+  .storyCopy h3 {
+    max-width: 40vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .storyCopy,
+  .hide {
+    font-size: 16px;
+  }
+  .storyCopy h3 {
+    max-width: 80vw;
+  }
+  .storyDescrip h2 {
+    font-size: 32px;
+    max-width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .storyCopy,
+  .hide {
+    padding: 2rem;
+    font-size: 14px;
+  }
+
+  .storyCopy h3 {
+    max-width: 80vw;
+    font-size: 14px;
+    margin: 1rem auto;
+  }
+
+  .storyCopy h4 {
+    bottom: 1vh;
+  }
+  button img {
+    max-width: 15px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  :root {
+    --lh: 1rem;
+  }
+  .storyCopy,
+  .hide {
+    padding: 2rem;
+    font-size: 13px;
+    line-height: var(--lh);
+  }
+
+  .copy {
+    --max-lines: 18;
+    position: relative;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+  }
+
+  .copy::before {
+    position: absolute;
+    content: "...";
+    bottom: 0;
+    right: 0;
+  }
+}
