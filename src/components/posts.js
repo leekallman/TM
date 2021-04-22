@@ -4,7 +4,7 @@ import Story from "./story.js";
 import Post from "./post.js";
 import './posts.css';
 
-const Posts = () => {
+const Posts = ({ gutter }) => {
     const { allContentfulMagArticle, allContentfulPost } = useStaticQuery(
         graphql`
         query {
@@ -52,7 +52,7 @@ const Posts = () => {
                                 __typename
                                 gatsbyImageData
                                 title
-                                fluid(maxWidth:600){
+                                fluid(maxWidth:550){
                                     src
                                 }
                             }
@@ -72,6 +72,7 @@ const Posts = () => {
                     <Story
                         key={node.index}
                         node={node}
+                        gutter={gutter}
                     />
                 ))}
                 {allContentfulMagArticle.edges.map(({ node }) => (
