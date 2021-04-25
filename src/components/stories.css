@@ -5,37 +5,13 @@
   text-align: center;
   scroll-behavior: smooth;
   scroll-snap-align: start;
-  overflow-y: scroll;
-}
-
-.gutter {
-  position: absolute;
-  display: flex;
-  top: 0;
-  /* left: 0; */
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 1000;
-}
-.leftGutter {
-  width: 50%;
-  height: 100%;
-  box-shadow: 0px 0 20px 0 rgba(0, 0, 0, 0.7);
-}
-
-.rightGutter {
-  width: 50%;
-  height: 100%;
-  box-shadow: 0px 0 20px 0 rgba(0, 0, 0, 0.7);
 }
 
 .storyInner {
   position: absolute;
-  z-index: 999;
   display: flex;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 .story p {
@@ -114,12 +90,16 @@
   left: 50vw;
   height: 100vh;
   z-index: 999;
-  column-width: 35vw;
-  column-gap: 0vw;
   transition: opacity 0.5s ease-in-out;
-  min-width: 50vw;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  background-color: green;
+}
+
+.storyCopyInner {
+  height: 100vh;
+  column-width: 35vw;
+  width: 100vw;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .storyCopy p > p,
@@ -207,10 +187,7 @@ hr {
   top: 0;
   right: 0;
   height: 100vh;
-  /* width: calc(100vw - 5px); */
   z-index: 9999;
-  /* padding: 3rem 5rem; */
-  /* opacity: 0; */
   display: none;
   transition: opacity 0.3s ease-in-out;
 }
@@ -226,26 +203,6 @@ button {
 
 button img {
   max-width: 20px;
-}
-
-.closeBtn {
-  position: sticky;
-  right: 1rem;
-  top: 1rem;
-  background: none;
-
-  border: none;
-}
-.closeBtn img {
-  margin: 0;
-}
-
-.scrollArrow {
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  bottom: 1rem;
-  display: flex;
 }
 
 .screenSize {
@@ -270,9 +227,6 @@ a {
 }
 
 @media only screen and (min-width: 1461px) {
-  .closeBtn {
-    display: none;
-  }
   .story:nth-child(odd) .readMoreBtn {
     border-radius: 70px;
   }
@@ -296,11 +250,11 @@ a {
   }
 }
 @media only screen and (min-width: 1200px) {
-  .scrollArrow {
+  .scrollArrow,
+  .closeBtn {
     display: none;
   }
 }
-
 @media only screen and (max-width: 1200px) {
   .story {
     display: grid;
@@ -310,13 +264,8 @@ a {
   }
   .storyInner {
     display: grid;
-    grid-template-columns: 1;
     width: 100vw;
     grid-row: 1;
-  }
-
-  .gutter {
-    display: none;
   }
   .storyDescrip {
     width: 100vw;
@@ -336,13 +285,10 @@ a {
   }
 
   .storyCopy {
-    top: -100vh;
     left: 0;
     width: 100vw;
+    position: absolute;
     font-size: 24px;
-    position: relative;
-    column-width: 100vw;
-    column-gap: 0;
   }
 
   .storyCopy h3 {
@@ -356,7 +302,36 @@ a {
     left: 0;
     width: 100vw;
     z-index: 0;
-    padding: 4rem 6rem;
+  }
+
+  .storyCopyInner {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    column-width: 100vw;
+    overflow-y: scroll;
+  }
+
+  .closeBtn {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    background: none;
+    border: none;
+  }
+
+  .closeBtn img {
+    margin: 0;
+  }
+
+  .scrollArrow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 1rem;
+    display: flex;
+    z-index: 10;
   }
 
   .storyDescrip h2,
@@ -383,6 +358,10 @@ a {
     margin: 1rem auto 2rem auto;
     font-size: 20px;
   }
+  .closeBtn {
+    right: 2rem;
+    top: 2rem;
+  }
 }
 
 @media only screen and (max-width: 760px) {
@@ -406,6 +385,14 @@ a {
     margin-left: 4rem;
     margin-right: 4rem;
   }
+  .closeBtn {
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .closeBtn img {
+    margin: 0;
+  }
 }
 @media only screen and (max-width: 600px) {
   .storyCopy,
@@ -426,7 +413,10 @@ a {
   .hide {
     font-size: 14px;
   }
-
+  .storyCopyInner {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
   .storyCopy p > p,
   .storyCopy h1,
   .storyCopy h2,
@@ -444,6 +434,15 @@ a {
   }
   button img {
     max-width: 15px;
+  }
+  .closeBtn img {
+    margin: 0;
+  }
+  .scrollArrow {
+    bottom: 0.5rem;
+  }
+  .scrollArrow p {
+    font-size: 16px;
   }
 }
 @media only screen and (max-width: 370px) {

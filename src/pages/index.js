@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import './main.css';
 import Hero from '../components/hero.js';
 import Posts from '../components/posts.js';
@@ -8,11 +8,6 @@ import { Helmet } from 'react-helmet';
 import useSiteMetadata from '../components/use-siteMetadata'
 
 const IndexPage = (props) => {
-
-  const [gutter, setGutter] = useState(true);
-
-
-
   const { title, description, author, url } = useSiteMetadata();
 
   useEffect(() => {

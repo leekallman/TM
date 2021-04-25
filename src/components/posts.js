@@ -47,15 +47,6 @@ const Posts = ({ gutter }) => {
                         }
                         body{
                             raw
-                            references{
-                                contentful_id
-                                __typename
-                                gatsbyImageData
-                                title
-                                fluid(maxWidth:550){
-                                    src
-                                }
-                            }
                         }
                         slug
                     }
@@ -67,6 +58,10 @@ const Posts = ({ gutter }) => {
 
     return (
         <section className="posts">
+            <div className={gutter ? 'noGutter' : 'gutter'}>
+                <div className="leftGutter"></div>
+                <div className="rightGutter"></div>
+            </div>
             <ul className="post-list">
                 {allContentfulPost.edges.map(({ node }) => (
                     <Story

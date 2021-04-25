@@ -1,7 +1,6 @@
-/* .post-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-} */
+.posts {
+  position: relative;
+}
 
 .post {
   display: flex;
@@ -16,6 +15,27 @@ p {
 .postDescrip,
 .postImg {
   width: 50vw;
+}
+
+.gutter {
+  position: absolute;
+  display: flex;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+.leftGutter {
+  width: 50%;
+  height: 100%;
+  box-shadow: 0 0 27px -5px #000;
+}
+
+.rightGutter {
+  width: 50%;
+  height: 100%;
+  box-shadow: 0 0 27px -5px #000;
 }
 
 .postDescrip {
@@ -86,6 +106,7 @@ p {
   z-index: 9999;
   padding: 3rem 5rem;
   transition: opacity 0.5s ease-in-out;
+  box-shadow: inset 5px 0 25px -10px #202020;
 }
 .copy {
   text-align: left;
@@ -173,6 +194,9 @@ a {
     grid-template-columns: 1;
     width: 100vw;
     scroll-snap-align: none;
+  }
+  .gutter {
+    display: none;
   }
   .postDescrip {
     width: 100vw;

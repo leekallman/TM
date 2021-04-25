@@ -48,10 +48,6 @@ const Story = ({ node, gutter }) => {
     }
     return (
         <div className="story" >
-            <div className={gutter ? 'noGutter' : 'gutter'}>
-                    <div className="leftGutter"></div>
-                    <div className="rightGutter"></div>
-            </div>
             <div className="storyInner">
                 <div className="storyDescrip">
                     <h2 className="storyTitle">{node.title}</h2>
@@ -65,13 +61,16 @@ const Story = ({ node, gutter }) => {
                     <button aria-label="Close" onClick={selectStory} className="closeBtn">
                         <img alt="close-button" src={cancel} />
                     </button>
-                    <h3 className="subHeading">{node.subHeading}</h3>
-                    <Text className="copy">{renderRichText(node.body, options)}</Text>
                     <div className="scrollArrow">
                         <img className="leftArrow" alt="left arrow" src={leftArrow} />
                         <p className="screenSize">Scroll</p>
                         <img className="rightArrow" alt="right arrow" src={rightArrow} />
                     </div>
+                    <div className="storyCopyInner">
+                        <h3 className="subHeading">{node.subHeading}</h3>
+                        <Text className="copy">{renderRichText(node.body, options)}</Text>
+                    </div>
+                    
                 </div>
 
             </div>
