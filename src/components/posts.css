@@ -1,316 +1,341 @@
-
 .posts {
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
+  position: relative;
 }
 
-.post{
-    display:flex;
-    grid-column: 1 /3;
-    height: 100vh;
-    position: relative;
-    text-align: center;
-    scroll-snap-align: start;
+.post {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  scroll-snap-align: start;
 }
-.postDescrip, .postImg{
-    width:50vw;
+p {
+  text-align: justify;
+}
+.postDescrip,
+.postImg {
+  width: 50vw;
 }
 
-.postDescrip{
-    justify-content: space-around;
-    display:flex;
-    flex-direction: column;
-    height: 100vh;
+.gutter {
+  position: absolute;
+  display: flex;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+.leftGutter {
+  width: 50%;
+  height: 100%;
+  box-shadow: 0 0 27px -5px #000;
+}
+
+.rightGutter {
+  width: 50%;
+  height: 100%;
+  box-shadow: 0 0 27px -5px #000;
+}
+
+.postDescrip {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 /* article intro */
-.post:nth-child(1) .postCopy, .post:nth-child(3) .postCopy, .post:nth-child(5) .postCopy, .post:nth-child(7) .postCopy, .post:nth-child(9) .postCopy, .post:nth-child(11) .postCopy{
-    background-color: var(--article1);
+.post:nth-child(odd) .postCopy {
+  background-color: var(--article1);
 }
-.post:nth-child(2) .postCopy, .post:nth-child(4) .postCopy, .post:nth-child(6) .postCopy, .post:nth-child(8) .postCopy, .post:nth-child(10) .postCopy{
-    background-color: var(--article2);
+.post:nth-child(even) .postCopy {
+  background-color: var(--article2);
 }
 
 /* article copy close buttons */
-.post:nth-child(1) .postCopy button, .post:nth-child(3) .postCopy button, .post:nth-child(5) .postCopy button, .pos:nth-child(7) .postCopy button, .pos:nth-child(9) .postCopy button, .pos:nth-child(11) .postCopy button{
-    border: none
+.post:nth-child(odd) .postCopy button {
+  border: none;
 }
-.post:nth-child(2) .postCopy button, .post:nth-child(4) .postCopy  button, .post:nth-child(6) .postCopy  button, .post:nth-child(8) .postCopy  button, .post:nth-child(10) .postCopy  button{
-    border: none
+.post:nth-child(even) .postCopy button {
+  border: none;
 }
-.post:nth-child(1) .postCopy button:hover, .post:nth-child(3) .postCopy button:hover, .post:nth-child(5) .postCopy button:hover, .post:nth-child(7) .postCopy button:hover, .post:nth-child(9) .postCopy button:hover, .post:nth-child(11) .postCopy button:hover{
-    border: none;
+.post:nth-child(odd) .postCopy button:hover {
+  border: none;
 }
-.post:nth-child(2) .postCopy button:hover, .post:nth-child(4) .postCopy button:hover, .post:nth-child(6) .postCopy button:hover, .post:nth-child(8) .postCopy button:hover, .post:nth-child(10) .postCopy button:hover{
-    border: none;
+.post:nth-child(even) .postCopy button:hover {
+  border: none;
 }
 
-.post:nth-child(1) .hide button, .post:nth-child(3) .hide button, .post:nth-child(5) .hide button, .pos:nth-child(7) .hide button, .pos:nth-child(9) .hide button,.pos:nth-child(11) .hide button{
-    border: none;
+.post:nth-child(odd) .hide button {
+  border: none;
 }
-.post:nth-child(2) .hide button, .post:nth-child(4) .hide button, .post:nth-child(6) .hide button, .post:nth-child(8) .hide button,.post:nth-child(10) .hide button{
-    border: none;
+.post:nth-child(even) .hide button {
+  border: none;
 }
 
 /* article cover */
-.post:nth-child(1), .post:nth-child(3), .post:nth-child(5), .post:nth-child(7), .post:nth-child(9),.post:nth-child(11){
-    background-color: var(--article1);
+.post:nth-child(odd) {
+  background-color: var(--article1);
 }
-.post:nth-child(2), .post:nth-child(4), .post:nth-child(8), .post:nth-child(8), .post:nth-child(10){
-    background-color: var(--article2);
+.post:nth-child(even) {
+  background-color: var(--article2);
 }
 
 /* article cover buttons */
-.post:nth-child(1) .readMoreBtn, .post:nth-child(3) .readMoreBtn, .post:nth-child(5) .readMoreBtn, .post:nth-child(7) .readMoreBtn, .post:nth-child(9) .readMoreBtn, .post:nth-child(11) .readMoreBtn{
-    border: solid 1px transparent;
-    border-radius: 50px;
+.post:nth-child(odd) .readMoreBtn {
+  border: solid 1px transparent;
+  border-radius: 50px;
 }
-.post:nth-child(2) .readMoreBtn, .post:nth-child(4) .readMoreBtn, .post:nth-child(6) .readMoreBtn, .post:nth-child(8) .readMoreBtn, .post:nth-child(10) .readMoreBtn{
-    border: solid 1px transparent;
-    border-radius: 50px;
+.post:nth-child(even) .readMoreBtn {
+  border: solid 1px transparent;
+  border-radius: 50px;
 }
 
 /* cover */
-.postDescrip h2{
-    margin: auto;
+.postDescrip h2 {
+  margin: auto;
 }
 
 /* modal */
-.postCopy{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height:100vh;
-    width: 50vw;
-    z-index: 9999;
-    padding:3rem 5rem;
-    transition: opacity 0.5s ease-in-out;
+.postCopy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50vw;
+  z-index: 9999;
+  padding: 3rem 5rem;
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: inset 5px 0 25px -10px #202020;
 }
-.copy{
-    text-align: left;
+.copy {
+  text-align: left;
 }
 .hide {
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height:100vh;
-    width: 50vw;
-    z-index: 9999;
-    padding: 3rem 5rem;
-    opacity:0;
-    transition: opacity 0.3s ease-in-out;
- }
-
- .postCopy h4, .hide h4{
-    position: absolute;
-    bottom:2rem;
-    left:30%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50vw;
+  z-index: 9999;
+  padding: 3rem 5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-button{
-    margin:auto;
-    padding:10px 50px;
-    display:inline-block;
-    font-family: Spectral;
-    background: none;
-    outline: none;
+.postCopy h4,
+.hide h4 {
+  position: absolute;
+  bottom: 2rem;
+  left: 30%;
 }
 
-button img{
-    max-width: 20px;
+button {
+  margin: auto;
+  padding: 10px 50px;
+  display: inline-block;
+  font-family: Spectral;
+  background: none;
+  outline: none;
 }
 
-.closeBtn{
-    margin:auto;
-    background: none;
-    padding:0;
-    float: right;
-    border:none;
+button img {
+  max-width: 20px;
 }
 
-.postDescrip .readMoreBtn:hover{
-    border: solid 1px var(--black);
-    cursor: pointer;
+.closeBtn {
+  margin: auto;
+  background: none;
+  padding: 0;
+  float: right;
+  border: none;
 }
 
-a{
-    cursor: pointer;
+.postDescrip .readMoreBtn:hover {
+  border: solid 1px var(--black);
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 1461px) {
-    .closeBtn{
-        display: none;
-    }
-    .post:nth-child(1) .readMoreBtn, .post:nth-child(3) .readMoreBtn, .post:nth-child(5) .readMoreBtn, .post:nth-child(7) .readMoreBtn, .post:nth-child(9) .readMoreBtn, .post:nth-child(11) .readMoreBtn{
-        border-radius: 70px;
-    }
-    .post:nth-child(2) .readMoreBtn, .post:nth-child(4) .readMoreBtn, .post:nth-child(6) .readMoreBtn, .post:nth-child(8) .readMoreBtn, .post:nth-child(10) .readMoreBtn{
-        border-radius: 70px;
-    }
-    button {
-        padding: 20px 70px;
-    }
+  .closeBtn {
+    display: none;
+  }
+  .post:nth-child(odd) .readMoreBtn {
+    border-radius: 70px;
+  }
+  .post:nth-child(even) .readMoreBtn {
+    border-radius: 70px;
+  }
+  button {
+    padding: 20px 70px;
+  }
 }
 @media only screen and (min-width: 1800px) {
-    .postCopy h3{
-        font-size:30px;
-        margin-bottom: 4vh;
-    }
-    .copy p{
-        font-size:24px;
-    }
-    .postCopy h4{
-        font-size:30px;
-    }
+  .postCopy h3 {
+    font-size: 30px;
+    margin-bottom: 4vh;
+  }
+  .copy p {
+    font-size: 24px;
+  }
+  .postCopy h4 {
+    font-size: 30px;
+  }
 }
 
-
 @media only screen and (max-width: 1200px) {
-    .post{
-        display:grid;
-        grid-template-columns: 1;
-        width:100vw;
-        scroll-snap-align: none;
-    }
-    .postDescrip{
-        width:100vw;
-        grid-row:1;
-        grid-column:1;
-    }
-    .postDescrip .readMoreBtn:hover{
-        border: solid 1px transparent;
-    }
+  .post {
+    display: grid;
+    grid-template-columns: 1;
+    width: 100vw;
+    scroll-snap-align: none;
+  }
+  .gutter {
+    display: none;
+  }
+  .postDescrip {
+    width: 100vw;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .postDescrip .readMoreBtn:hover {
+    border: solid 1px transparent;
+  }
 
-    .postImg{ 
-        grid-row:1;
-        width: 100vw;
-        z-index: 3;
-        opacity:0.8;
-        grid-column:1;
-    }
+  .postImg {
+    grid-row: 1;
+    width: 100vw;
+    z-index: 3;
+    opacity: 0.8;
+    grid-column: 1;
+  }
 
-    .postCopy{
-        top: -100vh;
-        left: 0;
-        width: 100vw;
-        font-size: 24px;
-        padding:4rem 6rem;
-        position: relative;
-    }
-    .postCopy h3{
-        max-width: 60vw;
-        font-size: 24px;
-        margin:1vh auto 4vh auto;
-    }
+  .postCopy {
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    font-size: 24px;
+    padding: 4rem 6rem;
+    position: relative;
+  }
+  .postCopy h3 {
+    max-width: 60vw;
+    font-size: 24px;
+    margin: 1vh auto 4vh auto;
+  }
 
-    .postCopy h4{
-        position: absolute;
-        bottom:3vh;
-        left: 50vw;
-        transform: translate(-50%, -50%);
-        margin:0;
-    }
-    .hide {
-        top: 0;
-        left: 0;
-        width: 100vw;
-        z-index: 0;
-        padding:4rem 6rem;
-     }
+  .postCopy h4 {
+    position: absolute;
+    bottom: 3vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  .hide {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 0;
+    padding: 4rem 6rem;
+  }
 
-   
-    .postDescrip h2, button, .postDescrip button{
-        z-index: 5;
-    }
+  .postDescrip h2,
+  button,
+  .postDescrip button {
+    z-index: 5;
+  }
 
-    /* article cover buttons */
-    .post:nth-child(1) button, .post:nth-child(3) button, .post:nth-child(5) button, .post:nth-child(7) button, .post:nth-child(9) button, .post:nth-child(11) button{
-        border: none;
-    }
+  /* article cover buttons */
+  .post:nth-child(odd) button {
+    border: none;
+  }
 
-    .post:nth-child(2) button, .post:nth-child(4) button, .post:nth-child(6) button, .post:nth-child(8) button,.post:nth-child(10) button,.post:nth-child(12) button{
-        border: none;
-    }
-    .postDescrip h2{
-        max-width: 60vw;
-    }
-
+  .post:nth-child(even) button {
+    border: none;
+  }
+  .postDescrip h2 {
+    max-width: 60vw;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
-    .postCopy, .hide{
-        padding:2rem 4rem;
-    }    
-    .postCopy h3{
-        margin: 1rem auto 2rem auto;
-        font-size: 20px;  
-}
+  .postCopy,
+  .hide {
+    padding: 2rem 4rem;
+  }
+  .postCopy h3 {
+    margin: 1rem auto 2rem auto;
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width: 760px) {
-    .postCopy{
-        font-size: 18px;
-        padding:1rem 3rem;
-    
-    }
-    .postCopy h3{
-        max-width: 40vw;
-    }
-
+  .postCopy {
+    font-size: 18px;
+    padding: 1rem 3rem;
+  }
+  .postCopy h3 {
+    max-width: 40vw;
+  }
 }
 @media only screen and (max-width: 600px) {
-    .postCopy, .hide{
-        font-size: 16px;
-    }
-    .postCopy h3{
-        max-width: 80vw;
-    }
-    .postDescrip h2{
-        font-size: 32px;
-        max-width: 80vw;
-    }
+  .postCopy,
+  .hide {
+    font-size: 16px;
+  }
+  .postCopy h3 {
+    max-width: 80vw;
+  }
+  .postDescrip h2 {
+    font-size: 32px;
+    max-width: 80vw;
+  }
 }
 
 @media only screen and (max-width: 485px) {
+  .postCopy,
+  .hide {
+    padding: 2rem;
+    font-size: 14px;
+  }
 
-    .postCopy, .hide{
-        padding:2rem;
-        font-size: 14px;
-    }
+  .postCopy h3 {
+    max-width: 80vw;
+    font-size: 14px;
+    margin: 1rem auto;
+  }
 
-   
-    .postCopy h3{
-        max-width: 80vw;
-        font-size: 14px;
-        margin: 1rem auto;
-    }
-
-    .postCopy h4{
-        bottom:1vh;
-    }
-    button img{
-        max-width: 15px;
-    }
+  .postCopy h4 {
+    bottom: 1vh;
+  }
+  button img {
+    max-width: 15px;
+  }
 }
 @media only screen and (max-width: 370px) {
-    :root {
-        --lh: 1rem;
-      }
-    .postCopy, .hide{
-        padding:2rem;
-        font-size: 13px;
-        line-height: var(--lh);
-    }
+  :root {
+    --lh: 1rem;
+  }
+  .postCopy,
+  .hide {
+    padding: 2rem;
+    font-size: 13px;
+    line-height: var(--lh);
+  }
 
-
-.copy{
+  .copy {
     --max-lines: 18;
     position: relative;
     max-height: calc(var(--lh) * var(--max-lines));
     overflow: hidden;
-}
+  }
 
-.copy::before {
+  .copy::before {
     position: absolute;
     content: "...";
     bottom: 0;

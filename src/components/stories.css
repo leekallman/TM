@@ -1,0 +1,471 @@
+.story {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+}
+
+.storyInner {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  overflow-x: scroll;
+}
+
+.story p {
+  text-align: justify;
+}
+.storyDescrip,
+.storyImg {
+  width: 50vw;
+}
+
+.storyDescrip {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* story intro */
+.story:nth-child(odd) .storyCopy {
+  background-color: var(--beige);
+}
+
+.story:nth-child(even) .storyCopy {
+  background-color: var(--mint);
+}
+
+/* story copy close buttons */
+.story:nth-child(odd) .storyCopy button {
+  border: none;
+}
+
+.story:nth-child(even) .storyCopy button {
+  border: none;
+}
+.story:nth-child(odd) .storyCopy button:hover {
+  border: none;
+}
+.story:nth-child(even) .storyCopy button:hover {
+  border: none;
+}
+
+.story:nth-child(odd) .hide button {
+  border: none;
+}
+.story:nth-child(even) .hide button {
+  border: none;
+}
+
+/* story cover */
+.story:nth-child(odd) {
+  background-color: var(--beige);
+}
+.story:nth-child(even) {
+  background-color: var(--mint);
+}
+
+/* story cover buttons */
+.story:nth-child(odd) .readMoreBtn {
+  border: solid 1px transparent;
+  border-radius: 50px;
+}
+.story:nth-child(even) .readMoreBtn {
+  border: solid 1px transparent;
+  border-radius: 50px;
+}
+
+/* cover */
+.storyDescrip h2 {
+  margin: auto;
+}
+
+/* modal */
+.storyCopy {
+  position: absolute;
+  top: 0;
+  left: 50vw;
+  height: 100vh;
+  z-index: 999;
+  transition: opacity 0.5s ease-in-out;
+  background-color: green;
+}
+
+.storyCopyInner {
+  height: 100vh;
+  column-width: 35vw;
+  width: 100vw;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.storyCopy p > p,
+.storyCopy h1,
+.storyCopy h2,
+/* .storyCopy h3, */
+.storyCopy h4,
+.storyCopy img,
+.storyCopy ul {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.storyCopy h1 {
+  font-size: 54px;
+  letter-spacing: -3px;
+}
+
+.storyCopy h2 {
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+
+.storyCopy h3 {
+  font-family: Helvetica neue, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 25vw;
+  text-align: center;
+  margin: 1rem auto;
+  letter-spacing: 0;
+}
+.storyCopy h4 {
+  font-family: Helvetica neue, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0;
+  margin-left: 5rem;
+  margin-top: 1rem;
+}
+
+.storyCopy li {
+  list-style: disc;
+}
+.storyCopy ul {
+  margin: 1rem 5rem;
+  padding-left: 1rem;
+}
+
+h3,
+.storyCopy:hover,
+.storyCopy p:hover {
+  cursor: url("../images/cursor-arrow-red.svg"), auto;
+}
+
+.copy {
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+blockquote p {
+  display: block;
+  margin: 1rem 6rem;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+hr {
+  width: 25vw;
+  background-color: #000;
+  height: 1px;
+  border: none;
+  margin: 2rem auto;
+}
+.storyCopy a {
+  text-decoration: underline;
+}
+
+.hide {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 9999;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+button {
+  margin: auto;
+  padding: 10px 50px;
+  display: inline-block;
+  font-family: Spectral;
+  background: none;
+  outline: none;
+}
+
+button img {
+  max-width: 20px;
+}
+
+.screenSize {
+  font-family: "Spectral", serif !important;
+  font-weight: 200 !important;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.leftArrow,
+.rightArrow {
+  margin: 0 1rem !important;
+}
+
+.storyDescrip .readMoreBtn:hover {
+  border: solid 1px var(--black);
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1461px) {
+  .story:nth-child(odd) .readMoreBtn {
+    border-radius: 70px;
+  }
+  .story:nth-child(even) .readMoreBtn {
+    border-radius: 70px;
+  }
+  button {
+    padding: 20px 70px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .storyCopy h3 {
+    font-size: 30px;
+    margin-bottom: 4vh;
+  }
+  .copy p {
+    font-size: 24px;
+  }
+  .storyCopy h4 {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .scrollArrow,
+  .closeBtn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .story {
+    display: grid;
+    grid-template-columns: 1;
+    width: 100vw;
+    scroll-snap-align: none;
+  }
+  .storyInner {
+    display: grid;
+    width: 100vw;
+    grid-row: 1;
+  }
+  .storyDescrip {
+    width: 100vw;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .storyDescrip .readMoreBtn:hover {
+    border: solid 1px transparent;
+  }
+
+  .storyImg {
+    grid-row: 1;
+    width: 100vw;
+    z-index: 3;
+    opacity: 0.8;
+    grid-column: 1;
+  }
+
+  .storyCopy {
+    left: 0;
+    width: 100vw;
+    position: absolute;
+    font-size: 24px;
+  }
+
+  .storyCopy h3 {
+    max-width: 60vw;
+    font-size: 24px;
+    margin: 1vh auto 4vh auto;
+  }
+
+  .hide {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 0;
+  }
+
+  .storyCopyInner {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    column-width: 100vw;
+    overflow-y: scroll;
+  }
+
+  .closeBtn {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    background: none;
+    border: none;
+  }
+
+  .closeBtn img {
+    margin: 0;
+  }
+
+  .scrollArrow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 1rem;
+    display: flex;
+    z-index: 10;
+  }
+
+  .storyDescrip h2,
+  button,
+  .storyDescrip button {
+    z-index: 5;
+  }
+
+  /* story cover buttons */
+  .story:nth-child(odd) button {
+    border: none;
+  }
+
+  .story:nth-child(even) button {
+    border: none;
+  }
+  .storyDescrip h2 {
+    max-width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .storyCopy h3 {
+    margin: 1rem auto 2rem auto;
+    font-size: 20px;
+  }
+  .closeBtn {
+    right: 2rem;
+    top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .storyCopy {
+    font-size: 18px;
+  }
+  .storyCopy p > p,
+  .storyCopy h1,
+  .storyCopy h2,
+  .storyCopy h4,
+  .storyCopy img,
+  .storyCopy ul {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .storyCopy h3 {
+    max-width: 40vw;
+  }
+
+  blockquote p {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  .closeBtn {
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .closeBtn img {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .storyCopy,
+  .hide {
+    font-size: 16px;
+  }
+  .storyCopy h3 {
+    max-width: 80vw;
+  }
+  .storyDescrip h2 {
+    font-size: 32px;
+    max-width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .storyCopy,
+  .hide {
+    font-size: 14px;
+  }
+  .storyCopyInner {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .storyCopy p > p,
+  .storyCopy h1,
+  .storyCopy h2,
+  .storyCopy h4,
+  .storyCopy img,
+  .storyCopy ul {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .storyCopy h3 {
+    max-width: 80vw;
+    font-size: 14px;
+    margin: 1rem auto;
+  }
+  button img {
+    max-width: 15px;
+  }
+  .closeBtn img {
+    margin: 0;
+  }
+  .scrollArrow {
+    bottom: 0.5rem;
+  }
+  .scrollArrow p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  :root {
+    --lh: 1rem;
+  }
+  .storyCopy,
+  .hide {
+    font-size: 13px;
+    line-height: var(--lh);
+  }
+
+  .copy {
+    --max-lines: 18;
+    position: relative;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+  }
+
+  .copy::before {
+    position: absolute;
+    content: "...";
+    bottom: 0;
+    right: 0;
+  }
+}

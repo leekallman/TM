@@ -1,58 +1,83 @@
 import React from "react";
-import { graphql, useStaticQuery } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
+import Story from "./story.js";
 import Post from "./post.js";
 import './posts.css';
 
-
-const Posts = () => {     
-    
-    const data = useStaticQuery(graphql`
+const Posts = ({ gutter }) => {
+    const { allContentfulMagArticle, allContentfulPost } = useStaticQuery(
+        graphql`
         query {
-            allMarkdownRemark (
-                sort: { order: DESC, fields: [frontmatter___date] }
-                ){
-                edges {
-                    node {
-                        frontmatter {
-                            id
+            allContentfulMagArticle (sort: { fields: [index], order: DESC }){
+                edges{
+                    node{
+                        index
+                        title
+                        name
+                        subHeading
+                        extract{
+                            raw
+                        }
+                        slug
+                        image{
                             title
-                            name
-                            details
-                            featuredImage {
-                                childImageSharp {
-                                    fluid(maxWidth: 800, quality: 100) {
-                                        ...GatsbyImageSharpFluid
-                                    }
-                                }
+                            fluid (maxWidth: 980){
+                                ...GatsbyContentfulFluid
+                                src
                             }
                         }
-                        html
-                        fields {
-                            slug
+                        
+                    }
+                }
+            }
+            allContentfulPost(sort: { fields: [date], order: DESC }){
+                edges{
+                    node{
+                        index
+                        title
+                        name
+                        subHeading
+                        date
+                        image{
+                            title
+                            fluid (maxWidth: 980){
+                                ...GatsbyContentfulFluid
+                                src
+                            }
                         }
+                        body{
+                            raw
+                        }
+                        slug
                     }
                 }
             }
         }
-    `)
-    
+    `
+    )
+
     return (
         <section className="posts">
+            <div className={gutter ? 'noGutter' : 'gutter'}>
+                <div className="leftGutter"></div>
+                <div className="rightGutter"></div>
+            </div>
             <ul className="post-list">
-            {data.allMarkdownRemark.edges.map((edge) => (
-                    <Post 
-                    id={edge.node.frontmatter.id} 
-                    data={data} 
-                    title={edge.node.frontmatter.title}
-                    name={edge.node.frontmatter.name}
-                    image={edge.node.frontmatter.featuredImage.childImageSharp.fluid}
-                    details={edge.node.frontmatter.details}
-                    html={{__html: edge.node.html}}
+                {allContentfulPost.edges.map(({ node }) => (
+                    <Story
+                        key={node.index}
+                        node={node}
+                        gutter={gutter}
+                    />
+                ))}
+                {allContentfulMagArticle.edges.map(({ node }) => (
+                    <Post
+                        key={node.index}
+                        node={node}
                     />
                 ))}
             </ul>
         </section>
     )
 }
-export default Posts;
-            
+export default Posts

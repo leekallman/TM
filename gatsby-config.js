@@ -1,3 +1,8 @@
+const dotenv = require('dotenv')
+
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config()
+}
 module.exports = {
   siteMetadata: {
     title: `Tort Magazine`,
@@ -7,16 +12,22 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-sharp',
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      }
+    },
   ],
 }
- 
