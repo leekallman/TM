@@ -4,7 +4,7 @@ import Story from "./story.js";
 import Post from "./post.js";
 import './posts.css';
 
-const Posts = ({ gutter }) => {
+const Posts = () => {
     const { allContentfulMagArticle, allContentfulPost } = useStaticQuery(
         graphql`
         query {
@@ -58,7 +58,7 @@ const Posts = ({ gutter }) => {
 
     return (
         <section className="posts">
-            <div className={gutter ? 'noGutter' : 'gutter'}>
+            <div className="gutter">
                 <div className="leftGutter"></div>
                 <div className="rightGutter"></div>
             </div>
@@ -67,7 +67,6 @@ const Posts = ({ gutter }) => {
                     <Story
                         key={node.index}
                         node={node}
-                        gutter={gutter}
                     />
                 ))}
                 {allContentfulMagArticle.edges.map(({ node }) => (
