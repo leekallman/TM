@@ -10,9 +10,8 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const Bold = ({ children }) => <span className="bold">{children}</span>
 const Text = ({ children }) => <p className="text">{children}</p>
-// const Link = ({ children }) => <a className="link">{children}</a>
 
-const Story = ({ node, gutter }) => {
+const Story = ({ node }) => {
     const [toggle, setToggle] = useState(true);
 
     const toggler = () => {
@@ -32,15 +31,15 @@ const Story = ({ node, gutter }) => {
             [INLINES.HYPERLINK]: (node, children) => <a href={node.data.uri}>{children}</a>,
             [BLOCKS.EMBEDDED_ASSET]: (node) => {
                 const {
-                    fluid:{src},
+                    fluid: { src },
                     title,
                 } = node.data.target
                 return (
                     <>
-                    <img src={src}
-                        alt={title}
-                        width="80%"
-                    />
+                        <img src={src}
+                            alt={title}
+                            width="80%"
+                        />
                     </>
                 )
             },
@@ -70,7 +69,7 @@ const Story = ({ node, gutter }) => {
                         <h3 className="subHeading">{node.subHeading}</h3>
                         <Text className="copy">{renderRichText(node.body, options)}</Text>
                     </div>
-                    
+
                 </div>
 
             </div>
